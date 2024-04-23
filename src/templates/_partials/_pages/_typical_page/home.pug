@@ -1,0 +1,29 @@
+section.home.home_project
+	.home__bg
+		+img(`${assetsPath}/img/home_bg_3.jpg`, '', 'image')
+	.home__container.container 
+
+		.section_block.section_block--center 
+			p.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Типовой проект
+			h1.section_block__title(data-scroll="", data-scroll-fadeup="") Лесогорский
+
+		.home_project__table
+			.home_project__item 
+				p.home_project__caption Общая площадь
+				p.home_project__text 90м²
+				
+			.home_project__item 
+				p.home_project__caption Срок строительства
+				p.home_project__text 70 дней
+			
+			.home_project__item 
+				p.home_project__caption Технология
+				p.home_project__text Брус
+			
+			.home_project__item 
+				p.home_project__caption Стоимость
+				p.home_project__text от 3 620 000 ₽
+
+			button.home_project__btn.btn.btn--white(data-linked-modal="modal_project")
+				span.btn__text Заказать проект
+		

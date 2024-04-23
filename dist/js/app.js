@@ -13907,6 +13907,7 @@
   if (canUseDom) {
     SimpleBar.initHtmlApi();
   }
+  //# sourceMappingURL=simplebar.esm.js.map
 
   class Modal {
   	constructor(el) {
@@ -21208,6 +21209,42 @@
 
   }
 
+  function projectInfoDropdown() {
+      const block = document.querySelectorAll('[data-dropdown-block]');
+      
+
+      block.forEach(el => {
+          const btn = el.querySelector('[data-dropdown-btn]');
+
+          btn.addEventListener('click', _ => {
+              el.classList.toggle('is-open');
+          });
+      });
+  }
+
+  function genInfoSlider () {
+      const slider = new Swiper('.general_info_slider', {
+          modules: [Mousewheel, Pagination, EffectFade],
+          slidesPerView: 1,
+          speed: 700,
+          spaceBetween: 0,
+          watchOverflow: true,
+          mousewheelControl: true,
+          mousewheel: {
+            forceToAxis: true,
+          },
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true
+          },
+          pagination: {
+            el: '.general_info_slider__pagination',
+            type: 'bullets',
+          },
+        });
+
+  }
+
   setTimeout(() => { 
       document.querySelector('body').classList.add('on-loaded');
   }, 1000);
@@ -21235,6 +21272,8 @@
       servicesToggle();
       advanSlider();
       clientsSlider();
+      genInfoSlider();
+      projectInfoDropdown();
 
       if (window.matchMedia("(max-width:500px)").matches) {
           techSlider();

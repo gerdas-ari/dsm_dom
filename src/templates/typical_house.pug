@@ -1,0 +1,11 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Типовой проект Лесогорский — ДСМ Дом';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+		include _partials/_pages/_typical_page/home
+		include _partials/_pages/_typical_page/general_info

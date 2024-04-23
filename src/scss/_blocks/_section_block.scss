@@ -57,6 +57,18 @@
 			-webkit-text-fill-color: transparent;
 		}
 
+		&--small {
+			font-size: em(42);
+			line-height: em(52,42);
+			font-weight: 466;
+			font-variation-settings: 'wght' 466, 'wdth' 132, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+			@media(max-width: 500px) {
+                font-size: em(32);
+                line-height: em(38,32);
+            }
+		}
+
 		.home & {
 			font-size: em(110);
 			line-height: em(92,110);

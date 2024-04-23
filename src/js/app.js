@@ -16,6 +16,8 @@ import servicesToggle from "./components/servicesToggle";
 import statsCounter from "./components/statsCounter";
 import advanSlider from "./components/sliders/advanSlider";
 import clientsSlider from "./components/sliders/clientsSlider";
+import projectInfoDropdown from "./components/projectInfoDropdown";
+import genInfoSlider from "./components/sliders/genInfoSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -44,6 +46,8 @@ document.addEventListener("DOMContentLoaded", _ => {
     servicesToggle();
     advanSlider();
     clientsSlider();
+    genInfoSlider();
+    projectInfoDropdown();
 
     if (window.matchMedia("(max-width:500px)").matches) {
         techSlider();

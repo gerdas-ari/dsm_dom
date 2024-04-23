@@ -1,0 +1,59 @@
+mixin genInfoDropdown(title)
+	.general_info_dropdown(data-dropdown-block="", data-scroll="", data-scroll-fadeup="")
+		button.general_info_dropdown__btn(data-dropdown-btn="")
+			span.general_info_dropdown__title= title 
+			.general_info_dropdown__icon
+				<svg class="icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99963 9.1665C12.2777 9.1665 15.833 9.16661 15.833 9.16661C16.2933 9.16661 16.6663 9.53969 16.6663 9.99994C16.6663 10.4602 16.2933 10.8333 15.833 10.8333H9.99963H4.16634C3.70611 10.8333 3.33301 10.4602 3.33301 9.99994C3.33301 9.53969 3.70611 9.16661 4.16634 9.16661C4.16634 9.16661 7.72159 9.1665 9.99963 9.1665Z" />
+					<path class="rotate" fill-rule="evenodd" clip-rule="evenodd" d="M9.16602 10.0004C9.16602 7.72229 9.16612 4.16699 9.16612 4.16699C9.16612 3.70674 9.5392 3.33366 9.99945 3.33366C10.4597 3.33366 10.8328 3.70674 10.8328 4.16699V10.0004V15.8337C10.8328 16.2939 10.4597 16.667 9.99945 16.667C9.5392 16.667 9.16612 16.2939 9.16612 15.8337C9.16612 15.8337 9.16602 12.2784 9.16602 10.0004Z" />
+				</svg>
+		ul.general_info_dropdown__list
+			li.general_info_dropdown__item
+				span.general_info_dropdown__text Размеры
+				span.general_info_dropdown__text 7x7 м
+			li.general_info_dropdown__item
+				span.general_info_dropdown__text Этажность
+				span.general_info_dropdown__text 1,5 этажа
+			li.general_info_dropdown__item
+				span.general_info_dropdown__text Высота от пола до потолка
+				span.general_info_dropdown__text 2,7 м
+			li.general_info_dropdown__item
+				span.general_info_dropdown__text Общая площадь
+				span.general_info_dropdown__text 90 м²
+			li.general_info_dropdown__item
+				span.general_info_dropdown__text Тёплая площадь
+				span.general_info_dropdown__text 74,2 м²
+			li.general_info_dropdown__item 
+				span.general_info_dropdown__text Площадь открытых террас, крылец, балконов
+				span.general_info_dropdown__text 10,4 м²
+
+section.general_info
+	.general_info__container.container
+		.general_info__content
+
+			.general_info__left
+
+				.section_block
+					h2.section_block__title.section_block__title--small Общая #[br.mobile] информация
+					p.section_block__text Проект современного одноэтажного частного дома
+
+				.general_info__gallery 
+					.general_info_slider.slider.swiper(data-gallery-slides='["/assets/img/gen_info_pic.jpg","/assets/img/gen_info_pic.jpg"]')
+						button.general_info_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+							+svg('full', 'icon')
+
+						.swiper-wrapper 
+							.general_info_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+								+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+							.general_info_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+								+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+
+					.general_info_slider__pagination.slider__pagination
+
+			
+			.general_info__right
+				+genInfoDropdown('Размеры и площадь')
+				+genInfoDropdown('Особенности конструкции')
+				+genInfoDropdown('Помещения')
+				+genInfoDropdown('Крыша')
+				
