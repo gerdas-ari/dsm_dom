@@ -1,0 +1,17 @@
+.types {
+
+    
+    &__content {
+        margin-top: em(106);
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: em(30);
+
+        @media(max-width: 500px) {
+            margin-top: em(38);
+
+            grid-template-columns: 100%;
+        }
+    }	
+}

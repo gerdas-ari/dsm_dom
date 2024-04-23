@@ -1,0 +1,60 @@
+mixin clientsSlide(img, title, text)
+	.clients_slide.swiper-slide
+		.clients_slide__img
+			+img(img, '', 'image')
+		.clients_slide__info 
+			.clients_slide__tag Фотогалерея
+			p.clients_slide__title= title
+			p.clients_slide__text!= text
+
+section.section.partners
+	.partners__container.container 
+		p.partners__caption Наши партнеры
+		
+		.partners__table 
+			.partners__table_img
+				+imgSvg(`${assetsPath}/img/partners_pic_1.svg`, '', 'image')
+			.partners__table_img
+				+imgSvg(`${assetsPath}/img/partners_pic_2.svg`, '', 'image')
+			.partners__table_img
+				+imgSvg(`${assetsPath}/img/partners_pic_3.svg`, '', 'image')
+			.partners__table_img
+				+imgSvg(`${assetsPath}/img/partners_pic_4.svg`, '', 'image')
+			.partners__table_img
+				+imgSvg(`${assetsPath}/img/partners_pic_5.svg`, '', 'image')
+			.partners__table_img
+				+imgSvg(`${assetsPath}/img/partners_pic_6.svg`, '', 'image')
+
+		.clients__slider.slider.swiper
+			.swiper-wrapper
+				+clientsSlide(`${assetsPath}/img/clients_pic.jpg`, 'Процесс строительства', 'Процесс постройки типового дома для одного из наших клиентов')
+				+clientsSlide(`${assetsPath}/img/clients_pic.jpg`, 'Процесс строительства', 'Процесс постройки типового дома для одного из наших клиентов')
+				+clientsSlide(`${assetsPath}/img/clients_pic.jpg`, 'Процесс строительства', 'Процесс постройки типового дома для одного из наших клиентов')
+
+			.clients__nav.slider__buttons
+				button.slider__button.slider__button--prev.clients__slider_btn--prev
+					+svg('slider_arrow')
+				button.slider__button.slider__button--next.clients__slider_btn--next
+					+svg('slider_arrow')
+		.clients__pagination.slider__pagination
+
+		.partners__bottom 
+			.partners_discuss
+				.partners_discuss__tag
+					.dot
+					.text Наши менеджеры готовы помочь
+
+				h3.partners_discuss__title Ответим на ваши вопросы #[br.desktop] и поможем #[br.mobile] с выбором
+				p.partners_discuss__text Мы понимаем, что определиться самостоятельно бывает сложно. #[br.desktop] Мы всегда готовы помочь вам, ответить на все вопросы #[br.desktop] и подсказать оптимальный вариант для ваших нужд
+				button.partners_discuss__btn.btn.btn--white(data-linked-modal="modal_project")
+					span.btn__text Обсудить проект
+
+			.partners_promo
+				h3.partners_discuss__title.partners_discuss__title--promo Время осуществить #[br] свою мечту
+				p.partners_discuss__text.partners_discuss__text--promo Обретите свой собственный, современный #[br] и экологичный дом для счастливой жизни
+				.types_card__img.types_card__img--promo
+					+img(`${assetsPath}/img/types_pic_2.png`, '', 'image')
+
+		
+
+	

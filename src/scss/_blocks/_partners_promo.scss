@@ -1,0 +1,35 @@
+.partners_promo {
+	height: 100%;
+
+    position: relative;
+
+    background: #F9F9FB;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: em(54);
+
+    position: relative;
+
+    @media(max-width: 500px) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: em(636);
+        height: em(636);
+        background: #F1F2F5;
+        border-radius: 50%;
+        position: absolute;
+        bottom: em(-264);
+        right: em(-138);
+    
+    }
+}

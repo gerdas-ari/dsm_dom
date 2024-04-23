@@ -1,0 +1,131 @@
+.partners_discuss {
+	display: flex;
+    flex-direction: column;
+    
+    background: $c-primary;
+
+    padding: em(74) em(48) em(64);
+
+    border-radius: 10px;
+
+    @media(max-width: 500px) {
+        padding: em(36) em(20) em(42);
+    }
+
+    &__tag {
+        display: flex;
+        align-items: center;
+
+        width: fit-content;
+
+        background: #fff;
+        padding: em(18) em(16);
+        border-radius: 5px;
+
+        font-size: em(16);
+        line-height: 1em;
+        color: $c-grey;
+
+        @media(max-width: 500px) {
+            display: none;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+
+            border-radius: 50%;
+            background: rgba(36, 165, 72, 0.2);
+
+            position: relative;
+
+            margin-right: 12px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $c-primary;
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%,-50%, 0) scale3d(1, 1, 1);
+                transition: transform 1.5s;
+                animation: pulse 1.5s infinite;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: em(42);
+        line-height: em(52,42);
+        font-weight: 500;
+        font-variation-settings: 'wght' 500, 'wdth' 151, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        color: #fff;
+
+        margin-top: auto;
+
+        @media(max-width: 500px) {
+            font-size: em(24);
+            line-height: em(32,24);
+
+            margin-top: 0;
+        }
+
+        &--promo {
+            color: $c-black;
+            text-align: center;
+            margin-top: 0;
+        }
+    }
+
+    &__text {
+		font-size: em(18);
+		font-weight: 400;
+		line-height: em(32,18);
+		color: #fff;
+
+		margin-top: 1em;
+
+        @media(max-width: 500px) {
+            font-size: em(16);
+            line-height: em(28,16);
+        }
+
+        &--promo {
+            color: $c-grey;
+            text-align: center;
+
+            margin-top: .75rem;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+
+        margin-top: 3.75rem;
+
+        @media(max-width: 500px) {
+            margin-top: 1.875rem;
+        }
+    }
+}
+
+@keyframes pulse {
+
+	from {
+		transform: translate3d(-50%,-50%,0) scale3d(1, 1, 1);
+	}
+
+    50% {
+        transform: translate3d(-50%,-50%,0) scale3d(1.7, 1.7, 1.7);
+    }
+
+	to {
+		transform: translate3d(-50%,-50%,0) scale3d(1, 1, 1);   
+	}
+}

@@ -1,0 +1,127 @@
+.catalog {
+	padding-top: em(120);
+
+    @media(max-width: 500px) {
+        padding-top: em(80);
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        z-index: 12;
+
+        @media(max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: em(42);
+        line-height: em(52,42);
+        font-weight: 466;
+        font-variation-settings: 'wght' 466, 'wdth' 132, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        color: $c-black;
+
+        @media(max-width: 500px) {
+            font-size: em(32);
+            line-height: em(52,32);
+        }
+    }
+
+    &__filter {
+        display: flex;
+        align-items: center;
+
+        margin-left: 2rem;
+
+        @media(max-width: 500px) {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: em(16) em(12);
+            
+            margin-left: 0;
+            margin-top: em(24);
+
+            width: 100%;
+
+            // overflow: scroll;
+            // overflow-y: visible;
+            // scrollbar-width: none;
+            // -webkit-scrollbar-width: none;
+
+            // &::-webkit-scrollbar {
+            //     height: 0px;
+            //     width: 0px;
+            //     background: transparent;
+            // }
+        }
+    }
+
+    &__filter_btn {
+        padding: .75rem em(22);
+		border-radius: 42px;
+		background-color: #F4F6F8;
+
+		font-weight: 500;
+		font-family: $text-font;
+		font-size: em(16);
+		line-height: 1em;
+        color: $c-primary;
+
+        margin-right: 10px;
+
+		transition: background .2s, color .2s;
+
+        @media(max-width: 500px) {
+            width: 100%;
+
+            margin-right: 0;
+        }
+
+		&:hover {
+			background: $c-primary;
+            color: #fff;
+		}
+
+        &.is-active {
+            background: $c-primary;
+            color: #fff;
+            pointer-events: none;
+        }
+    }
+
+    &__filter_dropdown {
+
+        @media(max-width: 500px) {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+    }
+
+    &__content {
+        margin-top: em(80);
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: em(30);
+
+        @media(max-width: 500px) {
+            margin-top: em(40);
+
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__btn_more {
+        margin-top: em(50);
+        width: 100%;
+
+        @media(max-width: 500px) {
+            margin-top: em(30);
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.services {
+	
+    &__content {
+        margin-top: em(118);
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: em(30);
+
+        position: relative;
+
+        max-height: em(658);
+        overflow: hidden;
+
+        transition: max-height .2s;
+
+        @media(max-width: 500px) {
+            margin-top: em(38);
+
+            grid-template-columns: 100%;
+            max-height: em(1002);
+        }
+
+        &.is-opened {
+            max-height: em(1002);
+
+            @media(max-width: 500px) {
+                max-height: 100%;
+            }
+        }
+    }
+
+    &__load_btn {
+
+        &--desktop,
+        &--mobile {
+
+            &.is-opened {
+    
+                .text--2 {
+                    display: initial;
+                }
+    
+                .text--1 { 
+                    display: none;
+                }
+    
+                .arrow {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+
+        &--desktop {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: calc((100% - em(90)) / 4 );
+            height: em(314);
+            z-index: 2;
+
+            background: $c-primary;
+            padding: em(24) em(24) em(24) em(28);
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            border-radius: 5px;
+
+            text-align: left;
+
+            transition: background .2s;
+
+            &:hover {
+                background: #1C883A;
+            }
+
+            @media(max-width: 500px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @media(max-width: 500px) {
+                display: flex !important;
+
+                margin-top: em(30,14);
+            }
+        }
+
+        .text {
+            font-family: $title-font;
+            font-size: em(24);
+            line-height: 2rem;
+            color: #fff;
+            font-weight: 466;
+            font-variation-settings: 'wght' 466, 'wdth' 151, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+            &--2 {
+                display: none;
+            }
+        }
+
+        .arrow {
+            width: 22px;
+            height: 20px;
+            stroke: #fff;
+
+            transform: rotate(90deg);
+
+            transition: transform .2s;
+        }
+    }
+}

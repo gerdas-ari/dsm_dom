@@ -1,0 +1,22 @@
+mixin techBlock(img, title, text)
+	.technologies_block.swiper-slide
+		h3.technologies_block__title= title
+		p.technologies_block__text!= text
+		.technologies_block__img
+			+img(img, '', 'image')
+
+section#tech.section.technologies(data-scroll-id="tech")
+	.technologies__container.container 
+
+		.section_block
+			.section_block__caption Технологии
+			h2.section_block__title Передовые #[strong технологии строительства]
+
+		.technologies__content.technologies__slider
+			.swiper-wrapper
+				+techBlock(`${assetsPath}/img/tech_img_1.png`, 'Дом из бруса', 'Брус – готовый пиломатериал, изготовленный из цельного древесного массива. Данный материал отличается долговечностью, экологичностью и простотой монтажа')
+				+techBlock(`${assetsPath}/img/tech_img_2.png`, 'Дом из монолита', 'Монолитный дом — это цельное железобетонное сооружение. Его стены и перекрытия не собраны из отдельных элементов, а отлиты из бетонной массы.')
+				+techBlock(`${assetsPath}/img/tech_img_3.png`, 'Дом из блока', 'Монолитный дом — это цельное железобетонное сооружение. Его стены и перекрытия не собраны из отдельных элементов, а отлиты из бетонной массы.')
+				+techBlock(`${assetsPath}/img/tech_img_4.png`, 'Дом из каркаса', 'Брус – готовый пиломатериал, изготовленный из цельного древесного массива. Данный материал отличается долговечностью, экологичностью и простотой монтажа')
+
+			.technologies__pagination.slider__pagination

@@ -1,0 +1,93 @@
+.services_card {
+	display: flex;
+    flex-direction: column;
+    
+    padding: em(36) em(28) em(30);
+    background: #F9F9FB;
+    border-radius: 5px;
+
+    @media(max-width: 500px) {
+        padding-left: em(20);
+        padding-right: em(20);
+    }
+
+    &.advantages_card {
+        padding: em(52) em(44);
+
+        background: #fff;
+        border: 1px solid #DBE0E9;
+
+        height: fit-content !important;
+
+        @media(max-width: 500px) {
+            padding: em(36) em(20);
+
+            margin: 0 !important;
+        }
+    }
+
+    &__icon {
+        width: em(34);
+        height: em(34);
+
+        margin-bottom: em(46);
+
+        .advantages_card & {
+            width: em(40);
+            height: em(40);
+
+            margin-bottom: em(92);
+
+            @media(max-width: 500px) {
+                width: em(30);
+                height: em(30);
+
+                margin-bottom: em(46);
+            }
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: em(24);
+        line-height: em(32,24);
+        font-weight: 466;
+        font-variation-settings: 'wght' 466, 'wdth' 132, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        color: $c-black;
+
+        min-height: em(64,24);
+
+        display: flex;
+        align-items: flex-end;
+
+        .advantages_card & {
+            font-size: em(34);
+            line-height: em(44,34);
+
+            @media(max-width: 500px) {
+                font-size: em(24);
+                line-height: em(32,24);
+            }
+        }
+    }
+
+    &__text {
+		font-size: em(16);
+		font-weight: 400;
+		line-height: em(28,16);
+		color: $c-grey;
+
+		margin-top: 1.25rem;
+
+        .advantages_card & {
+            font-size: em(18);
+            line-height: 2rem;
+
+            @media(max-width: 500px) {
+                font-size: em(16);
+                line-height: em(28,16);
+
+            }
+        }
+    }
+}

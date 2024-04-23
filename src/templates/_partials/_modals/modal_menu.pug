@@ -1,5 +1,32 @@
-//- .modal_menu.modal(data-modal="menu")
-//-     button.modal_close.modal_menu__close(data-modal-close)
-//-         +svg('close', 'icon')
-//-     .modal_menu__logo
-//-         +imgSvg(`${assetsPath}/img/header-logo.svg`, '', 'image')
+.modal_menu.modal(data-modal="modal_menu")
+
+	.header__line.modal_menu__top
+		a.header__logo(href="/")
+			+imgSvg(`${assetsPath}/img/black_logo.svg`, '', 'image')
+		
+		.header__mob
+			button.header__call(data-modal-close)
+				+svg('close', 'icon')
+	
+	.modal_menu__content
+
+		nav.modal_menu__nav
+			a.header__nav_link.header__nav_link--dot.modal_menu__nav_link.modal_menu__nav_link--dot(href="#projects") #[.dot] Проекты
+			a.header__nav_link.modal_menu__nav_link(href="#projects") Услуги
+			a.header__nav_link.modal_menu__nav_link(href="#projects") Технологии
+			a.header__nav_link.modal_menu__nav_link(href="#projects") Преимущества
+			a.header__nav_link.modal_menu__nav_link(href="#projects") О компании
+		
+		.modal_menu__contacts 
+			.footer__links_item 
+				p.footer__text.footer__text--caption По всем вопросам
+				a.footer__link(href="tel:+ 7 (914) 326-40-47") + 7 (914) 326-40-47
+			.footer__links_item 
+				p.footer__text.footer__text--caption Email
+				a.footer__link(href="mailto:dsmhouse@mail.ru") dsmhouse@mail.ru
+			.footer__links_item.footer__links_item--last 
+				p.footer__text.footer__text--caption Адрес
+				a.footer__link.footer__link--small(href="https://yandex.ru/maps/-/CDVmVIME", target="_blank") г. Владивосток, #[br] пр-кт Красного знамени 114А, оф. 401
+
+			button.modal_menu__btn.btn.btn--filled(data-linked-modal="modal_project")
+				span.btn__text Обсудить проект

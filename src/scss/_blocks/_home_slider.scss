@@ -1,0 +1,22 @@
+.home_slider {
+	display: none;	
+
+    @media(max-width: 500px) {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        left: 1.25em;
+        bottom: 3rem;
+
+        width: calc(100% - 2.5rem);
+    }
+
+    &__slide {
+        text-align: center;
+    }
+
+    &__pagination {
+        margin-top: .75rem;
+    }
+}

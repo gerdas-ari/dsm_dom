@@ -1,0 +1,28 @@
+section.home
+	.home__bg
+		+img(`${assetsPath}/img/home_bg_1.jpg`, '', 'image')
+	.home__container.container 
+
+		.section_block.section_block--center 
+			h1.section_block__title(data-scroll="", data-scroll-fadeup="") Мы строим #[br] ваши желания
+			p.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Строительство типовых домов #[br] или по индивидуальному проекту
+
+		.home_tab.home_tab--1
+			.home_tab__icon
+				+imgSvg(`${assetsPath}/img/home_tab_icon_1.svg`, '', 'image') 
+			p.home_tab__text Строительство занимает #[br] от 2 месяцев до года
+		
+		.home_tab.home_tab--2
+			.home_tab__icon
+				+imgSvg(`${assetsPath}/img/home_tab_icon_2.svg`, '', 'image') 
+			p.home_tab__text Заселение сразу после #[br] завершения работ
+
+		.home_slider.slider.swiper
+			.swiper-wrapper 
+				.home_slider__slide.swiper-slide 
+					p.home_tab__text Строительство занимает #[br] от 2 месяцев до года
+				.home_slider__slide.swiper-slide 
+					p.home_tab__text Заселение сразу после #[br] завершения работ
+
+			.home_slider__pagination.slider__pagination
+

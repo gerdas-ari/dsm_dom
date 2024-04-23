@@ -1,0 +1,39 @@
+mixin servicesCard(icon, title, text)
+	.services_card
+		.services_card__icon
+			+imgSvg(icon, '', 'image')
+		p.services_card__title!= title
+		p.services_card__text!= text
+
+section#services.section.services
+	.services__container.container 
+
+		.section_block
+			.section_block__caption Услуги
+			h2.section_block__title Оказываем #[br] #[strong полный спектр] #[br] услуг
+
+			button.section_block__btn_round(data-linked-modal="modal_project")
+				span.btn__text Обсудить проект
+
+		.services__content(data-services-container="")
+			+servicesCard(`${assetsPath}/img/services_icon_1.svg`, 'Индивидуальное проектирование', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_2.svg`, 'Дизайн-проект', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_3.svg`, 'Земляные работы', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_4.svg`, 'Фундамент <br> (все виды)', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_5.svg`, 'Возведение стен <br> и кровли', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_6.svg`, 'Фасад', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_7.svg`, 'Установка террас <br> и навесов', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_8.svg`, 'Коммуникации', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_9.svg`, 'Благоустройство', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_10.svg`, 'Ландшафтный дизайн', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_11.svg`, 'Мебель и отделка', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+
+			button.services__load_btn.services__load_btn--desktop(data-services-btn)
+				span.text.text--1 Показать все #[br] наши услуги 
+				span.text.text--2 Скрыть #[br] остальные услуги
+				+svg('arrow_diagon', 'arrow')
+
+		button.services__load_btn.services__load_btn--mobile.btn.btn--outlined(data-services-btn)
+			span.btn__text.text--1 Показать еще
+			span.btn__text.text--2 Скрыть
+

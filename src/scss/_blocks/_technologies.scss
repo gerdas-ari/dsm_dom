@@ -1,0 +1,30 @@
+.technologies {
+	background: #F9F9FB;
+
+    @media(max-width: 500px) {
+        //background: #fff;
+    }
+    
+    &__content {
+        margin-top: em(106);
+
+        @media(min-width: 501px) {
+
+            .swiper-wrapper {
+                transform: none !important;
+    
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: em(30);
+            }
+        }
+
+        @media(max-width: 500px) {
+            margin-top: em(38);
+        }
+    }
+
+    &__pagination {
+        margin: 2rem auto 0;
+    }
+}

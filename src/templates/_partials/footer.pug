@@ -1,12 +1,27 @@
 footer.footer
 	.footer__container.container
 
-	
+		.footer__table
+			button.footer__project_btn(data-linked-modal="modal_project")
+				+svg('arrow_diagon', 'arrow arrow--white')
+				+imgSvg(`${assetsPath}/img/arrow_diagon_gradient.svg`, '', 'arrow arrow--gradient')
+				span.text Обсудить проект
 
-		a.itome(href="https://itome.online/", target="_blank")
-			+imgSvg(`${assetsPath}/img/itome-logo.svg`, '', 'image')
-			.itome_tooltip
-				.itome_tooltip__logo
-					+svg('logoCircle', 'svg')
-				span.itome_tooltip__title #айтуми
-				span.itome_tooltip__subtitle digital production
+			.footer__links 
+				.footer__links_item 
+					p.footer__text.footer__text--caption Офис продаж
+					a.footer__link(href="tel:+ 7 (914) 326-40-47") + 7 (914) 326-40-47
+				.footer__links_item 
+					p.footer__text.footer__text--caption Email
+					a.footer__link(href="mailto:dsmhouse@mail.ru") dsmhouse@mail.ru
+				.footer__links_item.footer__links_item--last 
+					p.footer__text.footer__text--caption Адрес
+					a.footer__link.footer__link--small(href="https://yandex.ru/maps/-/CDVmVIME", target="_blank") г. Владивосток, #[br] пр-кт Красного знамени 114А, #[br] оф. 401
+
+
+
+		a.footer__text.footer__text--block.footer__text--link(href="/privacy") Политика конфиденциальности
+
+		.footer__bottom 
+			p.footer__text.footer__text--rights © 2016-2023, ООО «ДСМ», все права защищены. 
+			.footer__text.footer__text--block Разработка сайта — #[a.link(href="https://housevl.ru/", target="_blank") Digital-агентство House]

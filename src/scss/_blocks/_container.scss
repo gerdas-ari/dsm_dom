@@ -1,12 +1,13 @@
 .container {
 	display: flex;
+	flex-direction: column;
+	
 	width: 100%;
-	max-width: em(1280);
+	max-width: em(1600);
 	margin: 0 auto;
 
 	@media(max-width:500px) {
-		width: 100%;
-		padding-left: 1.5em;
-		padding-right: 1.5em;
+		padding-left: 1.25em;
+		padding-right: 1.25em;
 	}
 }

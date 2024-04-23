@@ -40,13 +40,31 @@
     }
 
     &__pagination {
-        font-family: $text-font;
-        font-size: em(18);
-        line-height: dm(22,18);
-        font-weight: 300;
-        color: $c-primary;
+        display: flex;
+        align-items: center;
+        width: fit-content;
 
-        margin: 0 em(15);
+        .swiper-pagination-bullet {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #EBEBF0;
+
+            transition: background .2s;
+
+            .home & {
+                background: #EBEBF066;
+            }
+
+            & + .swiper-pagination-bullet {
+                margin-left: 6px;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $c-primary !important;
+        }
 
         &.swiper-pagination-lock {
             display: none;
@@ -64,46 +82,30 @@
     }
 
     &__button {
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 25px;
         padding: 0;
-
-        border: 1px solid #242424;
-        border-radius: 50%;
-        background: white;
 
         display: flex;
         align-items: center;
         justify-content: center;
         flex: none;
 
-        transition: border .2s, background .2s;
-
         &--prev {
             transform: scaleX(-1);
         }
 
         &:hover {
-            background: $c-primary;
             svg {
-                fill: white;
+                stroke: #DBE0E9;
             }
         }
 
         svg {
-            width: 16px;
-            height: 16px;
-            fill: #242424;
-            transition: fill .2s;
-
-            .main_section & {
-                fill: white;
-            }
-        }
-
-        .main_section & {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid #FFFFFF;
+            width: 100%;
+            height: 100%;
+            stroke: #fff;
+            transition: stroke .2s;
         }
 
         &.swiper-button-lock {
@@ -112,15 +114,11 @@
 
         &.swiper-button-disabled {
             pointer-events: none;
-            border: 1px solid #C4C4C4;
-
-            svg {
-                fill: #C4C4C4;
-            }
+            opacity: .4;
         }
 
         & + & {
-            margin-left: 1em;
+            margin-left: em(48);
 
             svg {
                 // transform: scaleX(-1);

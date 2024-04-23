@@ -1,4 +1,28 @@
-header.header
+header.header.header--blur
 	.header__container.container
 		.header__line 
-			a.header__logo
+			a.header__logo(href="/")
+				+imgSvg(`${assetsPath}/img/white_logo.svg`, '', 'image')
+			
+			nav.header__nav
+				a.header__nav_link.header__nav_link--dot(href="#projects") #[.dot] Проекты
+				a.header__nav_link(href="#projects") Услуги
+				a.header__nav_link(href="#projects") Технологии
+				a.header__nav_link(href="#projects") Преимущества
+				a.header__nav_link(href="#projects") О компании
+
+			.header__socials 
+				a.header__socials_link.header__nav_link(href="tel:+7 914 326 40-47") +7 914 326 40-47
+				a.header__socials_link.header__nav_link(href="mailto:dsmhouse@mail.com") dsmhouse@mail.com
+
+				button.header__btn.btn.btn--filled(data-linked-modal="modal_project")
+					span.btn__text Обсудить проект
+			
+			.header__mob
+
+				a.header__call(href="tel:+7 914 326 40-47")
+					+svg('phone', 'icon')
+				button.header__menu(data-linked-modal="modal_menu")
+					+svg('menu', 'icon')
+
+

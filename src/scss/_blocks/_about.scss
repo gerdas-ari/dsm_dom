@@ -1,0 +1,17 @@
+.about {
+	background: #F9F9FB;
+
+    &__content {
+        margin-top: em(118);
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: em(30);
+
+        @media(max-width: 500px) {
+            margin-top: em(38);
+
+            grid-template-columns: 100%;
+        }
+    }	
+}

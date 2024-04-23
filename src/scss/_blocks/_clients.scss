@@ -1,0 +1,39 @@
+.clients {
+	
+    &__slider {
+        margin-top: em(100);
+        height: em(660);
+
+        position: relative;
+
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media(max-width: 500px) {
+            margin-top: em(60);
+
+            height: em(400);
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        z-index: 5;
+
+        right: em(48);
+        bottom: em(52);
+
+        @media(max-width: 500px) {
+            display: none;
+        }
+    }
+
+    &__pagination {
+        display: none;
+
+        @media(max-width: 500px) {
+            display: flex;
+            margin: 2em auto 0;
+        }
+    }
+}

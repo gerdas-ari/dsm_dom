@@ -8,7 +8,14 @@ import SimpleBar from "simplebar";
 import "simplebar/dist/simplebar.css";
 import ModalDispatcher from "./components/modalDispatcher";
 import formSubmit from "./components/form";
-import cookieTooltip from "./components/cookieTooltip";
+import homeTabsSlider from "./components/sliders/homeTabsSlider";
+import techSlider from "./components/sliders/techSlider";
+import HvrSlider from "./components/sliders/HvrSlider";
+import Dropdown from "./components/dropdown";
+import servicesToggle from "./components/servicesToggle";
+import statsCounter from "./components/statsCounter";
+import advanSlider from "./components/sliders/advanSlider";
+import clientsSlider from "./components/sliders/clientsSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -24,7 +31,7 @@ document.addEventListener("DOMContentLoaded", _ => {
         setTimeout(() => {
             document.querySelector('body').classList.add('disabled');
             // sessionStorage.setItem('site', 'enter');
-        }, 3500)
+        }, 1000)
         
         sessionStorage.activeSession = 1;
     } else {
@@ -32,9 +39,29 @@ document.addEventListener("DOMContentLoaded", _ => {
     }
 
     formSubmit();
-    cookieTooltip();
     ModalDispatcher.init();
 
+    servicesToggle();
+    advanSlider();
+    clientsSlider();
+
+    if (window.matchMedia("(max-width:500px)").matches) {
+        techSlider();
+
+        const blocks = document.querySelectorAll('.home');
+        blocks.forEach(block => {
+            homeTabsSlider();
+        })
+    }
+
+
+    if (document.querySelector('[data-hover-images=""]')) {
+        new HvrSlider('[data-hover-images=""]')
+    }
+
+    document.querySelectorAll('[data-dropdown]').forEach(el => {
+        new Dropdown(el);
+    })
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,
