@@ -1,0 +1,125 @@
+.tariffs_card {
+	height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #DBE0E9;
+    border-radius: 5px;
+
+    &--green {
+
+        .tariffs_card__top {
+            background: $c-primary;
+        }
+
+        .tariffs_card__info {
+            background: #D7F4DF;
+        }
+    }
+
+    &__top {
+        padding: em(30) em(24) em(40);
+
+        @media(max-width: 500px) {
+            padding: em(30) em(20) em(32);
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: em(20);
+        line-height: em(32,20);
+        font-weight: 500;
+        font-variation-settings: 'wght' 500, 'wdth' 151, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        color: $c-black;
+
+        display: flex;
+        align-items: center;
+
+        &--price {
+            margin-top: 1.5rem;
+            color: $c-primary;
+
+            font-size: em(26);
+            line-height: em(28,26);
+        }
+
+        &--white {
+            color: #fff;
+        }
+
+        .icon {
+            width: 12px;
+            height: 14px;
+            fill: #fff;
+
+            margin-left: 8px;
+        }
+    }
+
+    &__text {
+		font-weight: 400;
+		font-size: em(14);
+		line-height: em(28,14);
+		color: $c-grey;
+
+        margin-top: .5em;
+
+        &--white {
+            color: #fff;
+        }
+
+        &--list {
+            color: $c-black;
+            margin-top: 0;
+
+            .bold {
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        background: #F2F4F9;
+
+        padding: em(34) em(28) em(44);
+
+        @media(max-width: 500px) {
+            padding: em(30) em(20) em(40);
+        }
+    }
+
+    &__list {
+        margin-bottom: em(34);
+    }
+
+    &__item {
+        display: flex;
+
+        .icon {
+            width: 12px;
+            height: 12px;
+
+            margin-right: 8px;
+            margin-top: 8px;
+
+            @media(max-width: 500px) {
+                margin-right: 6px;
+            }
+        }
+
+        & + & {
+            margin-top: em(10);
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: auto;
+    }
+}

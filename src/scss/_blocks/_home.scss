@@ -5,6 +5,10 @@
 
     position: relative;
 
+    z-index: 15;
+
+    overflow: hidden;
+
     @media(max-width: 500px) {
         min-height: auto;
     }
@@ -47,4 +51,163 @@
 
         position: relative;
     }
+
+    &__anim_arrow {
+        position: absolute;
+        left: 50%;
+        bottom: em(60);
+        transform: translateX(-50%);
+
+        pointer-events: none;
+
+        @media(max-width: 500px) {
+            display: none;
+        }
+
+        .icon {
+            width: 14px;
+            height: 8px;
+            stroke: #fff;
+
+            animation-name: lift;
+            animation-duration: .6s; 
+            animation-timing-function: ease-out; 
+            animation-delay: 0;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+    }
+
+    &__anim_spheres {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        bottom: em(-720);
+
+        pointer-events: none;
+        //z-index: 2;
+
+        width: 1450px;
+        height: 1450px;
+
+        // @media(max-width: 1480px) {
+        //     display: none;
+        // }
+
+        .wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .sphere {
+            border: 1px solid #FFFFFF33;
+            border-radius: 50%;
+
+            transition: all .25s;
+
+
+            &--1 {
+                width: 604px;
+                height: 604px;
+
+                .home__container.is-inview & {
+                    animation: anim-effect-ivana-1 5s .1s;
+                }
+
+            }
+
+            &--2 {
+                width: 884px;
+                height: 884px;
+
+                .home__container.is-inview & { 
+
+                    animation: anim-effect-ivana-2 5s .25s;
+                }
+            }
+
+            &--3 {
+                width: 1174px;
+                height: 1174px;
+
+                .home__container.is-inview & { 
+
+                    animation: anim-effect-ivana-3 5s .4s;
+                }
+            }
+
+            &--4 {
+                width: 1450px;
+                height: 1450px;
+
+                .home__container.is-inview & { 
+
+                    animation: anim-effect-ivana-4 5s .55s;
+                }
+            }
+        }
+    }
 }
+
+@keyframes lift {
+	0% {
+		transform: translate3d(0, 1em, 0);
+	}
+	100% {
+		transform: translate3d(0, -1em, 0);
+	}
+}
+
+@keyframes anim-effect-ivana-1 {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.2, 0.2, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes anim-effect-ivana-2 {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.5, 0.5, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes anim-effect-ivana-3 {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.7, 0.7, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes anim-effect-ivana-4 {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.8, 0.8, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+

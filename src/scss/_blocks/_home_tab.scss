@@ -18,11 +18,21 @@
     &--1 {
         bottom: 20%;
         left: 8%;
+
+        @media(max-width: 1480px) {
+            bottom: 15%;
+            left: 2%;
+        }
     }
 
     &--2 {
         bottom: 35%;
         right: 1%;
+
+        @media(max-width: 1480px) {
+            bottom: 25%;
+            
+        }
     }
 
     &__icon {

@@ -2,7 +2,7 @@ footer.footer
 	.footer__container.container
 
 		.footer__table
-			button.footer__project_btn(data-linked-modal="modal_project")
+			button.footer__project_btn(data-linked-modal="modal_project", data-modal-set-inputs=`[{"key":"block","value":"Футер"}]`)
 				+svg('arrow_diagon', 'arrow arrow--white')
 				+imgSvg(`${assetsPath}/img/arrow_diagon_gradient.svg`, '', 'arrow arrow--gradient')
 				span.text Обсудить проект

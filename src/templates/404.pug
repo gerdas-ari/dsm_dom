@@ -6,12 +6,10 @@ block settings
 block content
 	section.not_found
 		.not_found__container.container
-			a.header__logo(href="/")
-				+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
-
-			.section_block.section_block--center
-				h1.section_block__title Сожалеем, но эта #[br.desktop] страница не найдена
-				p.section_block__text Скорее всего её больше не существует или был #[br.desktop] введён неверный URL-адрес. 
 			
-			a.not_found__button.btn.btn--filled(href='/')
-				span.btn__text На главную страницу
+			.section_block.section_block--center
+				h1.section_block__title.not_found__title(data-scroll="", data-scroll-fadeup="") #[strong 404]
+				p.section_block__text.not_found__text(data-scroll="", data-scroll-fadeup="") Страница не найдена или ее больше #[br.desktop] не существует
+			
+				a.not_found__button.btn.btn--filled(data-scroll="", data-scroll-fadeup="", href='/')
+					span.btn__text На главную

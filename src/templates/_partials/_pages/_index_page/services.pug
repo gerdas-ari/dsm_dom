@@ -1,18 +1,18 @@
 mixin servicesCard(icon, title, text)
-	.services_card
-		.services_card__icon
+	.services_card(data-scroll="", data-scroll-fadeup="")
+		.services_card__icon(data-scroll="", data-scroll-fadeup="")
 			+imgSvg(icon, '', 'image')
-		p.services_card__title!= title
-		p.services_card__text!= text
+		p.services_card__title(data-scroll="", data-scroll-fadeup="")!= title
+		p.services_card__text(data-scroll="", data-scroll-fadeup="")!= text
 
 section#services.section.services
-	.services__container.container 
+	.services__container.container(data-load-more-container="") 
 
 		.section_block
-			.section_block__caption Услуги
-			h2.section_block__title Оказываем #[br] #[strong полный спектр] #[br] услуг
+			.section_block__caption(data-scroll="", data-scroll-fadeup="") Услуги
+			h2.section_block__title(data-scroll="", data-scroll-fadeup="") Оказываем #[br] #[strong полный спектр] #[br] услуг
 
-			button.section_block__btn_round(data-linked-modal="modal_project")
+			button.section_block__btn_round(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_project", data-modal-set-inputs=`[{"key":"block","value":"Услуги"}]`)
 				span.btn__text Обсудить проект
 
 		.services__content(data-services-container="")
@@ -33,7 +33,7 @@ section#services.section.services
 				span.text.text--2 Скрыть #[br] остальные услуги
 				+svg('arrow_diagon', 'arrow')
 
-		button.services__load_btn.services__load_btn--mobile.btn.btn--outlined(data-services-btn)
+		button.services__load_btn.services__load_btn--mobile.btn.btn--outlined(data-scroll="", data-scroll-fadeup="", data-services-btn)
 			span.btn__text.text--1 Показать еще
 			span.btn__text.text--2 Скрыть
 

@@ -1,0 +1,117 @@
+.materials {
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+
+        margin-top: 2rem;
+
+        @media(max-width: 500px) {
+            margin-top: em(24);
+        }
+    }
+
+    &__tabs_btn {
+        padding: .75rem em(20);
+		border-radius: 42px;
+		background-color: #F4F6F8;
+
+		font-weight: 500;
+		font-family: $text-font;
+		font-size: em(16);
+		line-height: 1em;
+        color: $c-primary;
+
+		transition: background .2s, color .2s;
+
+        &:hover {
+			background: $c-primary;
+            color: #fff;
+		}
+
+        &.is-active {
+            background: $c-primary;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        & + & {
+            margin-left: 1em;
+
+            @media(max-width: 500px) {
+                margin-left: em(12);
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        margin-top: em(46);
+    }
+	
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        opacity: 0;
+        pointer-events: none;
+
+        align-items: center;
+
+        transition: opacity .3s;
+
+        &.is-active {
+            position: initial;
+            opacity: 1;
+            pointer-events: all;
+            transition: opacity .3s .2s;
+        }
+
+        @media(min-width: 501px) {
+
+            .swiper-wrapper {
+                transform: none !important;
+    
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: em(30);
+            }
+        }
+
+        @media(max-width: 500px) {
+            overflow: visible;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: em(504);
+
+        border-radius: 5px;
+        overflow: hidden;
+
+        border: 1px solid #DBE0E9;
+
+        position: relative;
+
+        @media(max-width: 1480px) {
+            height: em(340);
+        }
+
+        @media(max-width: 500px) {
+            height: em(286);
+        }
+
+        .image {
+            object-fit: cover;
+        }
+    }
+
+    &__pagination {
+        margin-top: 2rem;
+    }
+}

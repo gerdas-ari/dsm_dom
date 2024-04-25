@@ -1,4 +1,16 @@
 .services {
+
+    &.additional {
+        padding-top: em(120);
+
+        @media(max-width: 1480px) {
+            padding-top: em(100);
+        }
+
+        @media(max-width: 500px) {
+            padding-top: em(86);
+        }
+    }
 	
     &__content {
         margin-top: em(118);
@@ -14,6 +26,11 @@
 
         transition: max-height .2s;
 
+        @media(max-width: 1480px) {
+            margin-top: em(80);
+            grid-template-columns: repeat(3,1fr);
+        }
+
         @media(max-width: 500px) {
             margin-top: em(38);
 
@@ -23,6 +40,10 @@
 
         &.is-opened {
             max-height: em(1002);
+
+            @media(max-width: 1480px) {
+                max-height: em(1346);
+            }
 
             @media(max-width: 500px) {
                 max-height: 100%;
@@ -74,6 +95,10 @@
 
             &:hover {
                 background: #1C883A;
+            }
+
+            @media(max-width: 1480px) {
+                width: calc((100% - em(60)) / 3 );
             }
 
             @media(max-width: 500px) {

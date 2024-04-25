@@ -1,0 +1,17 @@
+.modal_success.modal_form.modal(data-modal="modal_success", action="/mailer", data-mailer="")
+	.modal_form__img 
+		+img(`${assetsPath}/img/modal_form_pic.jpg`, '', 'image')
+
+	.modal_form__form.modal_form__form--success
+		button.modal_close.modal_form__close(data-modal-close="")
+			+svg('close', 'icon')
+
+		.modal_form__icon
+			+imgSvg(`${assetsPath}/img/icon_success.svg`, '', 'image')
+
+		h3.modal_form__title Заявка отправлена
+		p.modal_form__text.section_block__text Спасибо! Наши менеджеры свяжутся с вами в ближайшее #[br.desktop] время, сразу после обработки вашей заявки
+	
+
+		button.modal_form__btn.btn.btn--filled(data-modal-close="")
+			span.btn__text Отлично

@@ -1,0 +1,47 @@
+section.section.materials
+	.materials__container.container(data-tab-wrapper="") 
+		h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Материалы #[br.mobile] по проекту
+
+		.materials__tabs(data-scroll="", data-scroll-fadeup="") 
+			button.materials__tabs_btn(data-tab-id="1") Планировки
+			button.materials__tabs_btn.is-active(data-tab-id="2") Фасады
+
+		.materials__content(data-scroll="", data-scroll-fadeup="") 
+			.materials__inner.slider.swiper(data-tab="1", data-gallery-slides='["/assets/img/gen_info_pic.jpg","/assets/img/gen_info_pic.jpg","/assets/img/gen_info_pic.jpg","/assets/img/gen_info_pic.jpg"]')
+				.swiper-wrapper
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+						+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+						+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="2")
+						+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="3")
+						+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+
+				.materials__pagination.slider__pagination
+			
+			.materials__inner.slider.swiper.is-active(data-tab="2", data-gallery-slides='["/assets/img/home_bg_3.jpg","/assets/img/home_bg_3.jpg","/assets/img/home_bg_3.jpg","/assets/img/home_bg_3.jpg"]')
+				.swiper-wrapper
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+						+img(`${assetsPath}/img/home_bg_3.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+						+img(`${assetsPath}/img/home_bg_3.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="2")
+						+img(`${assetsPath}/img/home_bg_3.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-linked-modal="modal_gallery", data-id="3")
+						+img(`${assetsPath}/img/home_bg_3.jpg`, '', 'image')
+
+				.materials__pagination.slider__pagination
+
+		
+		.materials_about(data-load-more-container="")
+			h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Описание #[br.mobile] проекта
+
+			.materials_about__right
+
+				.materials_about__wrap(data-scroll="", data-scroll-fadeup="", data-services-container="") 
+					p.section_block__text.section_block__text--black.materials_about__text Дом подойдет для комфортной жизни семьи из 4-5 человек. Проект выполнен в стиле шале: первый этаж сделан из керамических блоков, а второй — из дерева. Главный плюс таких домов — в компромиссе при выборе материала. Керамический блок позволяет экспериментировать с внутренней отделкой первого этажа. А клееный брус создаст уют деревянного дома на втором этаже, где расположены спальни. Дом подойдет для комфортной жизни семьи из 4-5 человек. Проект выполнен в стиле шале: первый этаж сделан из керамических блоков, а второй — из дерева. Главный плюс таких домов — в компромиссе при выборе материала. Керамический блок позволяет экспериментировать с внутренней отделкой первого этажа. А клееный брус создаст уют деревянного дома на втором этаже, где расположены спальни.
+
+				button.materials_about__btn_more(data-scroll="", data-scroll-fadeup="", data-services-btn="") 
+					span.text--1 Читать полностью
+					span.text--2 Скрыть

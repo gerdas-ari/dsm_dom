@@ -1,0 +1,31 @@
+.modal_order.modal_form.modal(data-modal="modal_order", action="/mailer", data-mailer="")
+	.modal_form__img 
+		+img(`${assetsPath}/img/modal_form_pic.jpg`, '', 'image')
+
+	form.modal_form__form(data-form-id="modal_order")
+		input(type="hidden", name="block", value="")
+		input(type="hidden", name="form", value="Заказать проект")
+
+		button.modal_close.modal_form__close(data-modal-close="")
+			+svg('close', 'icon')
+		h3.modal_form__title Заказать проект
+		p.modal_form__text.section_block__text Мы всегда готовы помочь! Оставьте свою заявку, после чего #[br.desktop] наши менеджеры свяжутся с вами в ближайшее время
+		
+		.modal_form__inputs
+			.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+				input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+				label.input_wrapper__label Ваше имя
+				.input_wrapper__tooltip(data-input-tooltip="")
+
+			.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+				input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+				label.input_wrapper__label Номер телефона
+				.input_wrapper__tooltip(data-input-tooltip="")
+
+			.span2.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+				textarea.input_wrapper__textarea(name="comment", placeholder="Комментарий")
+
+		button.modal_form__btn.btn.btn--filled
+			span.btn__text Отправить заявку
+
+		p.modal_form__privacy Нажимая на кнопку, вы даете согласие на обработку персональных #[br] данных и соглашаетесь c #[a.link(href="/privacy") политикой конфиденциальности]

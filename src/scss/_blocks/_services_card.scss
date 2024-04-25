@@ -38,7 +38,7 @@
 
             margin-bottom: em(92);
 
-            @media(max-width: 500px) {
+            @media(max-width: 1480px) {
                 width: em(30);
                 height: em(30);
 
@@ -64,7 +64,7 @@
             font-size: em(34);
             line-height: em(44,34);
 
-            @media(max-width: 500px) {
+            @media(max-width: 1480px) {
                 font-size: em(24);
                 line-height: em(32,24);
             }

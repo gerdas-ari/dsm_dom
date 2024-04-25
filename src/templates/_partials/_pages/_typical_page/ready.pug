@@ -1,0 +1,47 @@
+mixin clientsSlide(img, title, text)
+	.clients_slide.swiper-slide
+		.clients_slide__img
+			+img(img, '', 'image')
+		.clients_slide__info 
+			.clients_slide__tag Фотогалерея
+			p.clients_slide__title= title
+			p.clients_slide__text!= text
+
+section.section.partners.ready
+	.partners__container.container 
+
+		h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Как выглядят построенные дома
+
+		.clients__slider.slider.swiper(data-scroll="", data-scroll-fadeup="")
+			.swiper-wrapper
+				+clientsSlide(`${assetsPath}/img/clients_pic.jpg`, 'Завершенный проект №1', 'Завершенный типовой проект в частном секторе поселка под Владивостоком')
+				+clientsSlide(`${assetsPath}/img/clients_pic.jpg`, 'Завершенный проект №1', 'Завершенный типовой проект в частном секторе поселка под Владивостоком')
+				+clientsSlide(`${assetsPath}/img/clients_pic.jpg`, 'Завершенный проект №1', 'Завершенный типовой проект в частном секторе поселка под Владивостоком')
+
+			.clients__nav.slider__buttons
+				button.slider__button.slider__button--prev.clients__slider_btn--prev
+					+svg('slider_arrow')
+				button.slider__button.slider__button--next.clients__slider_btn--next
+					+svg('slider_arrow')
+		.clients__pagination.slider__pagination
+
+		.partners__bottom 
+			.partners_discuss(data-scroll="", data-scroll-fadeup="")
+				.partners_discuss__tag(data-scroll="", data-scroll-fadeup="")
+					.dot
+					.text Наши менеджеры готовы помочь
+
+				h3.partners_discuss__title(data-scroll="", data-scroll-fadeup="") Ответим на ваши вопросы #[br.desktop] и поможем #[br.mobile] с выбором
+				p.partners_discuss__text(data-scroll="", data-scroll-fadeup="") Мы понимаем, что определиться самостоятельно бывает сложно. #[br.desktop] Мы всегда готовы помочь вам, ответить на все вопросы #[br.desktop] и подсказать оптимальный вариант для ваших нужд
+				button.partners_discuss__btn.btn.btn--white(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_project", data-modal-set-inputs=`[{"key":"block","value":"Ответим на ваши вопросы и поможем с выбором (низ страницы типового проекта)"}]`)
+					span.btn__text Обсудить проект
+
+			.partners_promo(data-scroll="", data-scroll-fadeup="")
+				h3.partners_discuss__title.partners_discuss__title--promo(data-scroll="", data-scroll-fadeup="") Время осуществить #[br] свою мечту
+				p.partners_discuss__text.partners_discuss__text--promo(data-scroll="", data-scroll-fadeup="") Обретите свой собственный, современный #[br] и экологичный дом для счастливой жизни
+				.types_card__img.types_card__img--promo(data-scroll="", data-scroll-fadeup="")
+					+img(`${assetsPath}/img/types_pic_2.png`, '', 'image')
+
+		
+
+	

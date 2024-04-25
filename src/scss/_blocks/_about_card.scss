@@ -4,7 +4,7 @@
 	border-radius: 10px;
     border: 1px solid #DBE0E9;
 
-    @media(max-width: 500px) {
+    @media(max-width: 1480px) {
         padding: em(46) em(20) em(36);
     }
 
@@ -57,6 +57,13 @@
         @media(max-width: 500px) {
             font-size: em(16);
             line-height: em(28,16);
+        }
+
+        .desktop {
+
+            @media(max-width: 1480px) {
+                display: none;
+            }
         }
     }
 }

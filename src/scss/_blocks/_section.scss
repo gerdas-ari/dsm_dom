@@ -1,5 +1,9 @@
 .section {
 	padding: em(140) 0;
+
+	@media(max-width: 1480px) {
+		padding: em(120) 0;
+	}
 	
 	@media(max-width: 500px) {
 		padding: em(100) 0;

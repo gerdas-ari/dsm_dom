@@ -1,6 +1,6 @@
 mixin catalogCard(pic1, pic2, pic3, name, price, text)
-	a.catalog_card(href="/typical_house")
-		.catalog_card__pic
+	a.catalog_card(href="/typical_house", data-scroll="", data-scroll-fadeup="")
+		.catalog_card__pic(data-scroll="", data-scroll-fadeup="")
 			.catalog_card__tag 
 				+svg('fire', 'icon')
 				.text Популярно
@@ -8,7 +8,7 @@ mixin catalogCard(pic1, pic2, pic3, name, price, text)
 				img.image(data-lazy, data-src= pic1, alt="")
 				img.image(data-lazy, data-src= pic2, alt="")
 				img.image(data-lazy, data-src= pic3, alt="")
-		.catalog_card__info 
+		.catalog_card__info(data-scroll="", data-scroll-fadeup="") 
 			.catalog_card__top 
 				p.catalog_card__title= name
 				p.catalog_card__title.catalog_card__title--price= price
@@ -19,12 +19,12 @@ mixin catalogCard(pic1, pic2, pic3, name, price, text)
 				.catalog_card__params_btn 1 этаж
 
 
-section#catalog.catalog 
+section#catalog.catalog(data-scroll-id="catalog") 
 	.catalog__container.container 
 		.catalog__top 
-			h2.catalog__title Выбор решения
+			h2.catalog__title(data-scroll="", data-scroll-fadeup="") Выбор решения
 
-			.catalog__filter
+			.catalog__filter(data-scroll="", data-scroll-fadeup="")
 				button.catalog__filter_btn.is-active Типовое
 				button.catalog__filter_btn Индивидуальное
 				.catalog__filter_dropdown(data-dropdown="", data-dropdown-name="square", data-dropdown-placeholder="Площадь", data-dropdown-readonly="true", data-dropdown-options='[{"key":"60м²","value":"60м²"},{"key":"90м²","value":"90м²"},{"key":"120м²","value":"120м²"},{"key":"160м²","value":"160м²"}]')
@@ -37,5 +37,5 @@ section#catalog.catalog
 			+catalogCard(`${assetsPath}/img/catalog_pic_1.jpg`, `${assetsPath}/img/catalog_pic_2.jpg`, `${assetsPath}/img/catalog_pic_3.jpg`, 'Брайтстон - Д35', 'от 2 000 000 ₽', 'Заселение сразу после Заселение сразу после завершения работЗаселение сразу после завершения работ Заселение сразу после завершения работ завершения работ')
 			+catalogCard(`${assetsPath}/img/catalog_pic_1.jpg`, `${assetsPath}/img/catalog_pic_2.jpg`, `${assetsPath}/img/catalog_pic_3.jpg`, 'Брайтстон - Д35', 'от 2 000 000 ₽', 'Заселение сразу после Заселение сразу после завершения работЗаселение сразу после завершения работ Заселение сразу после завершения работ завершения работ')
 
-		button.catalog__btn_more.btn.btn--outlined
+		button.catalog__btn_more.btn.btn--outlined(data-scroll="", data-scroll-fadeup="")
 			span.btn__text Показать еще

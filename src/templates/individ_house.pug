@@ -1,0 +1,12 @@
+extends _base/_layout
+block settings 
+
+	- title = 'ИНдивидуальный проект Люксембург — ДСМ Дом';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+		include _partials/_pages/_individ_page/home
+		include _partials/_pages/_individ_page/individ_info
+		include _partials/_pages/_individ_page/materials

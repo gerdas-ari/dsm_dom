@@ -1,5 +1,5 @@
 mixin advanCard(icon, title, text)
-	.advantages_card.services_card.swiper-slide
+	.advantages_card.services_card.swiper-slide(data-scroll="", data-scroll-fadeup="")
 		.services_card__icon
 			+imgSvg(icon, '', 'image')
 		p.services_card__title!= title
@@ -10,15 +10,15 @@ section#advantages.section.advantages
 		.advantages__content 
 
 			.section_block
-				.section_block__caption Преимущества
-				h2.section_block__title Возьмемся #[br.desktop] за дело #[strong любой сложности]
-				p.section_block__text.section_block__text--black Обладаем всем необходимым, чтобы квалифицированно реализовать #[br.desktop] проект любой степени сложности для своих клиентов
+				.section_block__caption(data-scroll="", data-scroll-fadeup="") Преимущества
+				h2.section_block__title(data-scroll="", data-scroll-fadeup="") Возьмемся #[br.desktop] за дело #[strong любой сложности]
+				p.section_block__text.section_block__text--black(data-scroll="", data-scroll-fadeup="") Обладаем всем необходимым, чтобы квалифицированно реализовать #[br.desktop] проект любой степени сложности для своих клиентов
 
 			
 			.advantages__gallery 
-				a.advantages__skip_btn(href="#tech", data-anchor="tech") Пропустить
+				a.advantages__skip_btn(href="#tech", data-anchor="tech", data-scroll="", data-scroll-fadeup="") Пропустить
 
-				.advantages__slider.slider.swiper 
+				.advantages__slider.slider.swiper(data-scroll="", data-scroll-fadeup="") 
 					.swiper-wrapper 
 						+advanCard(`${assetsPath}/img/advan_icon_1.svg`, 'Выполняем строительство <br> дома «под ключ»', 'Берем на себя все этапы строительства и любые сложности. Клиенту доставляется полностью готовый дом, готовый к проживанию')
 						+advanCard(`${assetsPath}/img/advan_icon_2.svg`, 'Имеем большой опыт в сфере строительства', 'Берем на себя все этапы строительства и любые сложности. Клиенту доставляется полностью готовый дом, готовый к проживанию')

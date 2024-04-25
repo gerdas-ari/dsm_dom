@@ -96,6 +96,7 @@
 
         .image {
             display: none;
+            object-fit: cover;
 
             &:first-child {
                 display: block;

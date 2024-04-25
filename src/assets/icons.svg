@@ -4,6 +4,10 @@
 			<path d="M2 31.278L33 2m0 0H2m31 0v29.278" stroke-width="3.444"/>
 		</symbol>
 	
+		<symbol id="arrow_dropdown" viewBox="0 0 16 10">
+			<path d="M1 1l7 7 7-7" stroke-width="2"/>
+		</symbol>
+	
 		<symbol id="arrow_short" viewBox="0 0 5 8">
 			<path d="M4.94 4l-4-4L0 .94 3.054 4 0 7.06.94 8l4-4z"/>
 		</symbol>

@@ -37,6 +37,8 @@
         left: em(48);
         z-index: 2;
 
+        max-width: 60%;
+
         @media(max-width: 500px) {
             bottom: em(32);
             left: em(20);

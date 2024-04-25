@@ -8,7 +8,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: em(30);
 
-        @media(max-width: 500px) {
+        @media(max-width: 1480px) {
             margin-top: em(38);
 
             grid-template-columns: 100%;

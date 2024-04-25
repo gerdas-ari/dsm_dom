@@ -1,26 +1,36 @@
 section.home.home_double
 	.home__bg
 		+img(`${assetsPath}/img/home_bg_2.jpg`, '', 'image')
-	.home__container.container 
+	.home__container.container(data-scroll="", data-scroll-fadeup="")
+
+		.home__anim_spheres
+			.wrap.wrap--1 
+				.sphere.sphere--1
+			.wrap.wrap--2 
+				.sphere.sphere--2
+			.wrap.wrap--3 
+				.sphere.sphere--3
+			.wrap.wrap--4 
+				.sphere.sphere--4 
 
 		.section_block.section_block--center 
 			h1.section_block__title(data-scroll="", data-scroll-fadeup="") Дома #[br.mobile] в которых #[br] хочется жить
 
-		.home_tab.home_tab--1
+		.home_tab.home_tab--1(data-scroll="", data-scroll-fadeup="")
 			.home_tab__icon
 				+imgSvg(`${assetsPath}/img/home_tab_icon_2.svg`, '', 'image') 
 			p.home_tab__text Реализовали уже #[br] более 150 проектов
 		
-		.home_tab.home_tab--2
+		.home_tab.home_tab--2(data-scroll="", data-scroll-fadeup="")
 			.home_tab__icon
 				+imgSvg(`${assetsPath}/img/home_tab_icon_3.svg`, '', 'image') 
 			p.home_tab__text Экологичные материалы #[br] для строительства
 
 		.home_slider.slider.swiper
 			.swiper-wrapper 
-				.home_slider__slide.swiper-slide 
+				.home_slider__slide.swiper-slide(data-scroll="", data-scroll-fadeup="") 
 					p.home_tab__text Реализовали уже #[br] более 150 проектов
-				.home_slider__slide.swiper-slide 
+				.home_slider__slide.swiper-slide(data-scroll="", data-scroll-fadeup="") 
 					p.home_tab__text Экологичные материалы #[br] для строительства
 
 			.home_slider__pagination.slider__pagination

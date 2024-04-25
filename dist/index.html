@@ -23,6 +23,10 @@
 			<path d="M2 31.278L33 2m0 0H2m31 0v29.278" stroke-width="3.444"/>
 		</symbol>
 	
+		<symbol id="arrow_dropdown" viewBox="0 0 16 10">
+			<path d="M1 1l7 7 7-7" stroke-width="2"/>
+		</symbol>
+	
 		<symbol id="arrow_short" viewBox="0 0 5 8">
 			<path d="M4.94 4l-4-4L0 .94 3.054 4 0 7.06.94 8l4-4z"/>
 		</symbol>
@@ -33,6 +37,10 @@
 	
 		<symbol id="fire" viewBox="0 0 12 16">
 			<path d="M12 9.366c0-1.906-.908-3.801-2.43-5.069l-.197-.16a.468.468 0 0 0-.715.155c-.062.131-.106 1.46-.106 1.685 0 .045-.01.119-.009.127a.311.311 0 0 1-.364.307c-.153-.025-.258-.17-.258-.326-.01-2.273-.705-3.86-1.98-5.043C5.161.318 4.239-.322 3.957.177c-.072.128.047.414.167.78.267.816-.547 2.118-1.697 3.42C1.346 5.6 0 7.123 0 9.367c0 3.018 2.86 5.769 6 5.769s6-2.75 6-5.77z"/>
+		</symbol>
+	
+		<symbol id="full" viewBox="0 0 16 16">
+			<path d="M14.667 2.813a.222.222 0 0 0-.38-.158L10.054 6.89a.667.667 0 0 1-.943-.943l4.234-4.233a.222.222 0 0 0-.158-.38H10.89a.667.667 0 1 1 0-1.333h4.444c.368 0 .667.298.667.667V5.11a.667.667 0 0 1-1.333 0V2.813zM1.333 13.187a.222.222 0 0 0 .38.158L5.946 9.11a.667.667 0 1 1 .943.943l-4.234 4.233a.222.222 0 0 0 .158.38H5.11a.667.667 0 0 1 0 1.333H.667A.667.667 0 0 1 0 15.333V10.89a.667.667 0 1 1 1.333 0v2.299z"/>
 		</symbol>
 	
 		<symbol id="logoCircle" viewBox="0 0 10 7">
@@ -83,7 +91,7 @@
             <div class="footer__links_item footer__links_item--last"> 
               <p class="footer__text footer__text--caption">Адрес</p><a class="footer__link footer__link--small" href="https://yandex.ru/maps/-/CDVmVIME" target="_blank">г. Владивосток, <br> пр-кт Красного знамени 114А, оф. 401</a>
             </div>
-            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Меню&quot;}]"><span class="btn__text">Обсудить проект</span></button>
           </div>
         </div>
       </div>
@@ -95,6 +103,7 @@
           </picture>
         </div>
         <form class="modal_form__form" data-form-id="modal_project">
+          <input type="hidden" name="block" value="">
           <input type="hidden" name="form" value="Обсудить проект">
           <button class="modal_close modal_form__close" data-modal-close="">
             <svg class="icon">
@@ -122,6 +131,73 @@
           <p class="modal_form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь c <a class="link" href="/privacy">политикой конфиденциальности</a></p>
         </form>
       </div>
+      <div class="modal_order modal_form modal" data-modal="modal_order" action="/mailer" data-mailer="">
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/modal_form_pic.jpg" alt=""/>
+          </picture>
+        </div>
+        <form class="modal_form__form" data-form-id="modal_order">
+          <input type="hidden" name="block" value="">
+          <input type="hidden" name="form" value="Заказать проект">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <h3 class="modal_form__title">Заказать проект</h3>
+          <p class="modal_form__text section_block__text">Мы всегда готовы помочь! Оставьте свою заявку, после чего <br class="desktop"> наши менеджеры свяжутся с вами в ближайшее время</p>
+          <div class="modal_form__inputs">
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Номер телефона</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="comment" placeholder="Комментарий"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="modal_form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь c <a class="link" href="/privacy">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+      <div class="modal modal_gallery" data-modal="modal_gallery">
+        <button class="modal_close modal_gallery__close" data-modal-close>
+          <svg class="icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <div class="swiper slider_gallery">
+          <div class="swiper-wrapper"></div>
+        </div>
+        <div class="slider_gallery__pagination slider__pagination"></div>
+      </div>
+      <div class="modal_success modal_form modal" data-modal="modal_success" action="/mailer" data-mailer="">
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/modal_form_pic.jpg" alt=""/>
+          </picture>
+        </div>
+        <div class="modal_form__form modal_form__form--success">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <div class="modal_form__icon"><img class="image" data-src="/assets/img/icon_success.svg" alt="" data-lazy=""/>
+          </div>
+          <h3 class="modal_form__title">Заявка отправлена</h3>
+          <p class="modal_form__text section_block__text">Спасибо! Наши менеджеры свяжутся с вами в ближайшее <br class="desktop"> время, сразу после обработки вашей заявки</p>
+          <button class="modal_form__btn btn btn--filled" data-modal-close=""><span class="btn__text">Отлично</span></button>
+        </div>
+      </div>
     </div>
     <div class="content">
       <header class="header header--blur">
@@ -130,7 +206,28 @@
             <nav class="header__nav"><a class="header__nav_link header__nav_link--dot" href="#catalog">
                 <div class="dot"></div> Проекты</a><a class="header__nav_link" href="#services">Услуги</a><a class="header__nav_link" href="#tech">Технологии</a><a class="header__nav_link" href="#advantages">Преимущества</a><a class="header__nav_link" href="#about">О компании</a></nav>
             <div class="header__socials"> <a class="header__socials_link header__nav_link" href="tel:+7 914 326 40-47">+7 914 326 40-47</a><a class="header__socials_link header__nav_link" href="mailto:dsmhouse@mail.com">dsmhouse@mail.com</a>
-              <button class="header__btn btn btn--filled" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+              <button class="header__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Хедер&quot;}]"><span class="btn__text">Обсудить проект</span></button>
+            </div>
+            <div class="header__mob"><a class="header__call" href="tel:+7 914 326 40-47">
+                <svg class="icon">
+                  <use xlink:href="#phone"></use>
+                </svg></a>
+              <button class="header__menu" data-linked-modal="modal_menu">
+                <svg class="icon">
+                  <use xlink:href="#menu"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header header--white">
+        <div class="header__container container">
+          <div class="header__line"> <a class="header__logo" href="/"><img class="image" data-src="/assets/img/black_logo.svg" alt="" data-lazy=""/></a>
+            <nav class="header__nav"><a class="header__nav_link header__nav_link--dot" href="#catalog">
+                <div class="dot"></div> Проекты</a><a class="header__nav_link" href="#services">Услуги</a><a class="header__nav_link" href="#tech">Технологии</a><a class="header__nav_link" href="#advantages">Преимущества</a><a class="header__nav_link" href="#about">О компании</a></nav>
+            <div class="header__socials"> <a class="header__socials_link header__nav_link" href="tel:+7 914 326 40-47">+7 914 326 40-47</a><a class="header__socials_link header__nav_link" href="mailto:dsmhouse@mail.com">dsmhouse@mail.com</a>
+              <button class="header__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Хедер&quot;}]"><span class="btn__text">Обсудить проект</span></button>
             </div>
             <div class="header__mob"><a class="header__call" href="tel:+7 914 326 40-47">
                 <svg class="icon">
@@ -153,27 +250,46 @@
               <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_bg_1.jpg" alt=""/>
             </picture>
           </div>
-          <div class="home__container container"> 
+          <div class="home__container container" data-scroll="" data-scroll-fadeup="">
+            <div class="home__anim_spheres">
+              <div class="wrap wrap--1"> 
+                <div class="sphere sphere--1"></div>
+              </div>
+              <div class="wrap wrap--2"> 
+                <div class="sphere sphere--2"></div>
+              </div>
+              <div class="wrap wrap--3"> 
+                <div class="sphere sphere--3"></div>
+              </div>
+              <div class="wrap wrap--4"> 
+                <div class="sphere sphere--4"></div>
+              </div>
+            </div>
+            <div class="home__anim_arrow"> 
+              <svg class="icon">
+                <use xlink:href="#arrow_dropdown"></use>
+              </svg>
+            </div>
             <div class="section_block section_block--center"> 
               <h1 class="section_block__title" data-scroll="" data-scroll-fadeup="">Мы строим <br> ваши желания</h1>
               <p class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Строительство типовых домов <br> или по индивидуальному проекту</p>
             </div>
-            <div class="home_tab home_tab--1">
+            <div class="home_tab home_tab--1" data-scroll="" data-scroll-fadeup="">
               <div class="home_tab__icon"><img class="image" data-src="/assets/img/home_tab_icon_1.svg" alt="" data-lazy=""/>
               </div>
               <p class="home_tab__text">Строительство занимает <br> от 2 месяцев до года</p>
             </div>
-            <div class="home_tab home_tab--2">
+            <div class="home_tab home_tab--2" data-scroll="" data-scroll-fadeup="">
               <div class="home_tab__icon"><img class="image" data-src="/assets/img/home_tab_icon_2.svg" alt="" data-lazy=""/>
               </div>
               <p class="home_tab__text">Заселение сразу после <br> завершения работ</p>
             </div>
             <div class="home_slider slider swiper">
               <div class="swiper-wrapper"> 
-                <div class="home_slider__slide swiper-slide"> 
+                <div class="home_slider__slide swiper-slide" data-scroll="" data-scroll-fadeup="">
                   <p class="home_tab__text">Строительство занимает <br> от 2 месяцев до года</p>
                 </div>
-                <div class="home_slider__slide swiper-slide"> 
+                <div class="home_slider__slide swiper-slide" data-scroll="" data-scroll-fadeup=""> 
                   <p class="home_tab__text">Заселение сразу после <br> завершения работ</p>
                 </div>
               </div>
@@ -184,16 +300,16 @@
         <section class="section types">
           <div class="types__container container"> 
             <div class="section_block">
-              <div class="section_block__caption">Решения</div>
-              <h2 class="section_block__title">Строим дома <br> <strong>для каждого</strong></h2>
+              <div class="section_block__caption" data-scroll="" data-scroll-fadeup="">Решения</div>
+              <h2 class="section_block__title" data-scroll="" data-scroll-fadeup="">Строим дома <br> <strong>для каждого</strong></h2>
             </div>
             <div class="types__content">
-              <div class="types_card">
+              <div class="types_card" data-scroll="" data-scroll-fadeup="">
                 <div class="types_card__info">
-                  <h3 class="types_card__title">Типовое решение</h3>
-                  <p class="types_card__text">Под готовым решением понимается уже полностью сформированный проект, выполненный согласно тематике <br class="desktop"> и в наиболее подходящей стилистике</p>
-                  <p class="types_card__text types_card__text--bold">Площадь </p>
-                  <div class="types_card__buttons"> 
+                  <h3 class="types_card__title" data-scroll="" data-scroll-fadeup="">Типовое решение</h3>
+                  <p class="types_card__text" data-scroll="" data-scroll-fadeup="">Под готовым решением понимается уже полностью сформированный проект, выполненный согласно тематике <br class="desktop"> и в наиболее подходящей стилистике</p>
+                  <p class="types_card__text types_card__text--bold" data-scroll="" data-scroll-fadeup="">Площадь </p>
+                  <div class="types_card__buttons" data-scroll="" data-scroll-fadeup=""> 
                     <div class="types_card__radio_btn"> 
                       <input class="radio" type="radio" name="typical_square" value="60">
                       <div class="content"> <span class="number">60м²</span></div>
@@ -210,7 +326,7 @@
                       <input class="radio" type="radio" name="typical_square" value="160">
                       <div class="content"> <span class="number">160м²</span></div>
                     </div>
-                  </div><a class="types_card__btn btn btn--filled" href="#catalog" data-anchor="catalog"><span class="btn__text">Посмотреть проекты</span></a>
+                  </div><a class="types_card__btn btn btn--filled" data-scroll="" data-scroll-fadeup="" href="#catalog" data-anchor="catalog"><span class="btn__text">Посмотреть проекты</span></a>
                 </div>
                 <div class="types_card__img">
                   <picture class="image">
@@ -219,12 +335,12 @@
                   </picture>
                 </div>
               </div>
-              <div class="types_card">
+              <div class="types_card" data-scroll="" data-scroll-fadeup="">
                 <div class="types_card__info">
-                  <h3 class="types_card__title">Индивидуальное решение</h3>
-                  <p class="types_card__text">Для желающих быть ни на кого не похожими. Полностью уникальная архитектура, любые конструктивные и дизайнерские решения. Такого дома не будет больше ни у кого</p>
-                  <p class="types_card__text types_card__text--bold">Площадь </p>
-                  <div class="types_card__buttons"> 
+                  <h3 class="types_card__title" data-scroll="" data-scroll-fadeup="">Индивидуальное решение</h3>
+                  <p class="types_card__text" data-scroll="" data-scroll-fadeup="">Для желающих быть ни на кого не похожими. Полностью уникальная архитектура, любые конструктивные и дизайнерские решения. Такого дома не будет больше ни у кого</p>
+                  <p class="types_card__text types_card__text--bold" data-scroll="" data-scroll-fadeup="">Площадь </p>
+                  <div class="types_card__buttons" data-scroll="" data-scroll-fadeup="">
                     <div class="types_card__radio_btn"> 
                       <input class="radio" type="radio" name="individ_square" value="60">
                       <div class="content"> <span class="number">60м²</span></div>
@@ -241,7 +357,7 @@
                       <input class="radio" type="radio" name="individ_square" value="160">
                       <div class="content"> <span class="number">160м²</span></div>
                     </div>
-                  </div><a class="types_card__btn btn btn--filled" href="#catalog" data-anchor="catalog"><span class="btn__text">Посмотреть проекты</span></a>
+                  </div><a class="types_card__btn btn btn--filled" data-scroll="" data-scroll-fadeup="" href="#catalog" data-anchor="catalog"><span class="btn__text">Посмотреть проекты</span></a>
                 </div>
                 <div class="types_card__img">
                   <picture class="image">
@@ -260,26 +376,40 @@
               <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_2.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_bg_2.jpg" alt=""/>
             </picture>
           </div>
-          <div class="home__container container"> 
+          <div class="home__container container" data-scroll="" data-scroll-fadeup="">
+            <div class="home__anim_spheres">
+              <div class="wrap wrap--1"> 
+                <div class="sphere sphere--1"></div>
+              </div>
+              <div class="wrap wrap--2"> 
+                <div class="sphere sphere--2"></div>
+              </div>
+              <div class="wrap wrap--3"> 
+                <div class="sphere sphere--3"></div>
+              </div>
+              <div class="wrap wrap--4"> 
+                <div class="sphere sphere--4"> </div>
+              </div>
+            </div>
             <div class="section_block section_block--center"> 
               <h1 class="section_block__title" data-scroll="" data-scroll-fadeup="">Дома <br class="mobile"> в которых <br> хочется жить</h1>
             </div>
-            <div class="home_tab home_tab--1">
+            <div class="home_tab home_tab--1" data-scroll="" data-scroll-fadeup="">
               <div class="home_tab__icon"><img class="image" data-src="/assets/img/home_tab_icon_2.svg" alt="" data-lazy=""/>
               </div>
               <p class="home_tab__text">Реализовали уже <br> более 150 проектов</p>
             </div>
-            <div class="home_tab home_tab--2">
+            <div class="home_tab home_tab--2" data-scroll="" data-scroll-fadeup="">
               <div class="home_tab__icon"><img class="image" data-src="/assets/img/home_tab_icon_3.svg" alt="" data-lazy=""/>
               </div>
               <p class="home_tab__text">Экологичные материалы <br> для строительства</p>
             </div>
             <div class="home_slider slider swiper">
               <div class="swiper-wrapper"> 
-                <div class="home_slider__slide swiper-slide"> 
+                <div class="home_slider__slide swiper-slide" data-scroll="" data-scroll-fadeup=""> 
                   <p class="home_tab__text">Реализовали уже <br> более 150 проектов</p>
                 </div>
-                <div class="home_slider__slide swiper-slide"> 
+                <div class="home_slider__slide swiper-slide" data-scroll="" data-scroll-fadeup=""> 
                   <p class="home_tab__text">Экологичные материалы <br> для строительства</p>
                 </div>
               </div>
@@ -287,18 +417,18 @@
             </div>
           </div>
         </section>
-        <section class="catalog" id="catalog"> 
+        <section class="catalog" id="catalog" data-scroll-id="catalog"> 
           <div class="catalog__container container"> 
             <div class="catalog__top"> 
-              <h2 class="catalog__title">Выбор решения</h2>
-              <div class="catalog__filter">
+              <h2 class="catalog__title" data-scroll="" data-scroll-fadeup="">Выбор решения</h2>
+              <div class="catalog__filter" data-scroll="" data-scroll-fadeup="">
                 <button class="catalog__filter_btn is-active">Типовое</button>
                 <button class="catalog__filter_btn">Индивидуальное</button>
                 <div class="catalog__filter_dropdown" data-dropdown="" data-dropdown-name="square" data-dropdown-placeholder="Площадь" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;60м²&quot;,&quot;value&quot;:&quot;60м²&quot;},{&quot;key&quot;:&quot;90м²&quot;,&quot;value&quot;:&quot;90м²&quot;},{&quot;key&quot;:&quot;120м²&quot;,&quot;value&quot;:&quot;120м²&quot;},{&quot;key&quot;:&quot;160м²&quot;,&quot;value&quot;:&quot;160м²&quot;}]"></div>
               </div>
             </div>
-            <div class="catalog__content"><a class="catalog_card" href="/typical_house">
-                        <div class="catalog_card__pic">
+            <div class="catalog__content"><a class="catalog_card" href="/typical_house" data-scroll="" data-scroll-fadeup="">
+                        <div class="catalog_card__pic" data-scroll="" data-scroll-fadeup="">
                           <div class="catalog_card__tag"> 
                             <svg class="icon">
                               <use xlink:href="#fire"></use>
@@ -307,7 +437,7 @@
                           </div>
                           <div class="catalog_card__pic_wrap" data-hover-images=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_1.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_2.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_3.jpg" alt=""></div>
                         </div>
-                        <div class="catalog_card__info"> 
+                        <div class="catalog_card__info" data-scroll="" data-scroll-fadeup=""> 
                           <div class="catalog_card__top"> 
                             <p class="catalog_card__title">Брайтстон - Д35</p>
                             <p class="catalog_card__title catalog_card__title--price">от 2 000 000 ₽</p>
@@ -318,8 +448,8 @@
                             <div class="catalog_card__params_btn">1 спальня</div>
                             <div class="catalog_card__params_btn">1 этаж</div>
                           </div>
-                        </div></a><a class="catalog_card" href="/typical_house">
-                        <div class="catalog_card__pic">
+                        </div></a><a class="catalog_card" href="/typical_house" data-scroll="" data-scroll-fadeup="">
+                        <div class="catalog_card__pic" data-scroll="" data-scroll-fadeup="">
                           <div class="catalog_card__tag"> 
                             <svg class="icon">
                               <use xlink:href="#fire"></use>
@@ -328,7 +458,7 @@
                           </div>
                           <div class="catalog_card__pic_wrap" data-hover-images=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_1.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_2.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_3.jpg" alt=""></div>
                         </div>
-                        <div class="catalog_card__info"> 
+                        <div class="catalog_card__info" data-scroll="" data-scroll-fadeup=""> 
                           <div class="catalog_card__top"> 
                             <p class="catalog_card__title">Брайтстон - Д35</p>
                             <p class="catalog_card__title catalog_card__title--price">от 2 000 000 ₽</p>
@@ -339,8 +469,8 @@
                             <div class="catalog_card__params_btn">1 спальня</div>
                             <div class="catalog_card__params_btn">1 этаж</div>
                           </div>
-                        </div></a><a class="catalog_card" href="/typical_house">
-                        <div class="catalog_card__pic">
+                        </div></a><a class="catalog_card" href="/typical_house" data-scroll="" data-scroll-fadeup="">
+                        <div class="catalog_card__pic" data-scroll="" data-scroll-fadeup="">
                           <div class="catalog_card__tag"> 
                             <svg class="icon">
                               <use xlink:href="#fire"></use>
@@ -349,7 +479,7 @@
                           </div>
                           <div class="catalog_card__pic_wrap" data-hover-images=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_1.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_2.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_3.jpg" alt=""></div>
                         </div>
-                        <div class="catalog_card__info"> 
+                        <div class="catalog_card__info" data-scroll="" data-scroll-fadeup=""> 
                           <div class="catalog_card__top"> 
                             <p class="catalog_card__title">Брайтстон - Д35</p>
                             <p class="catalog_card__title catalog_card__title--price">от 2 000 000 ₽</p>
@@ -360,8 +490,8 @@
                             <div class="catalog_card__params_btn">1 спальня</div>
                             <div class="catalog_card__params_btn">1 этаж</div>
                           </div>
-                        </div></a><a class="catalog_card" href="/typical_house">
-                        <div class="catalog_card__pic">
+                        </div></a><a class="catalog_card" href="/typical_house" data-scroll="" data-scroll-fadeup="">
+                        <div class="catalog_card__pic" data-scroll="" data-scroll-fadeup="">
                           <div class="catalog_card__tag"> 
                             <svg class="icon">
                               <use xlink:href="#fire"></use>
@@ -370,7 +500,7 @@
                           </div>
                           <div class="catalog_card__pic_wrap" data-hover-images=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_1.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_2.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_3.jpg" alt=""></div>
                         </div>
-                        <div class="catalog_card__info"> 
+                        <div class="catalog_card__info" data-scroll="" data-scroll-fadeup=""> 
                           <div class="catalog_card__top"> 
                             <p class="catalog_card__title">Брайтстон - Д35</p>
                             <p class="catalog_card__title catalog_card__title--price">от 2 000 000 ₽</p>
@@ -381,8 +511,8 @@
                             <div class="catalog_card__params_btn">1 спальня</div>
                             <div class="catalog_card__params_btn">1 этаж</div>
                           </div>
-                        </div></a><a class="catalog_card" href="/typical_house">
-                        <div class="catalog_card__pic">
+                        </div></a><a class="catalog_card" href="/typical_house" data-scroll="" data-scroll-fadeup="">
+                        <div class="catalog_card__pic" data-scroll="" data-scroll-fadeup="">
                           <div class="catalog_card__tag"> 
                             <svg class="icon">
                               <use xlink:href="#fire"></use>
@@ -391,7 +521,7 @@
                           </div>
                           <div class="catalog_card__pic_wrap" data-hover-images=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_1.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_2.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_3.jpg" alt=""></div>
                         </div>
-                        <div class="catalog_card__info"> 
+                        <div class="catalog_card__info" data-scroll="" data-scroll-fadeup=""> 
                           <div class="catalog_card__top"> 
                             <p class="catalog_card__title">Брайтстон - Д35</p>
                             <p class="catalog_card__title catalog_card__title--price">от 2 000 000 ₽</p>
@@ -402,8 +532,8 @@
                             <div class="catalog_card__params_btn">1 спальня</div>
                             <div class="catalog_card__params_btn">1 этаж</div>
                           </div>
-                        </div></a><a class="catalog_card" href="/typical_house">
-                        <div class="catalog_card__pic">
+                        </div></a><a class="catalog_card" href="/typical_house" data-scroll="" data-scroll-fadeup="">
+                        <div class="catalog_card__pic" data-scroll="" data-scroll-fadeup="">
                           <div class="catalog_card__tag"> 
                             <svg class="icon">
                               <use xlink:href="#fire"></use>
@@ -412,7 +542,7 @@
                           </div>
                           <div class="catalog_card__pic_wrap" data-hover-images=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_1.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_2.jpg" alt=""><img class="image" data-lazy data-src="/assets/img/catalog_pic_3.jpg" alt=""></div>
                         </div>
-                        <div class="catalog_card__info"> 
+                        <div class="catalog_card__info" data-scroll="" data-scroll-fadeup=""> 
                           <div class="catalog_card__top"> 
                             <p class="catalog_card__title">Брайтстон - Д35</p>
                             <p class="catalog_card__title catalog_card__title--price">от 2 000 000 ₽</p>
@@ -425,82 +555,82 @@
                           </div>
                         </div></a>
             </div>
-            <button class="catalog__btn_more btn btn--outlined"><span class="btn__text">Показать еще</span></button>
+            <button class="catalog__btn_more btn btn--outlined" data-scroll="" data-scroll-fadeup=""><span class="btn__text">Показать еще</span></button>
           </div>
         </section>
         <section class="section services" id="services">
-          <div class="services__container container"> 
+          <div class="services__container container" data-load-more-container=""> 
             <div class="section_block">
-              <div class="section_block__caption">Услуги</div>
-              <h2 class="section_block__title">Оказываем <br> <strong>полный спектр</strong> <br> услуг</h2>
-              <button class="section_block__btn_round" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+              <div class="section_block__caption" data-scroll="" data-scroll-fadeup="">Услуги</div>
+              <h2 class="section_block__title" data-scroll="" data-scroll-fadeup="">Оказываем <br> <strong>полный спектр</strong> <br> услуг</h2>
+              <button class="section_block__btn_round" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Услуги&quot;}]"><span class="btn__text">Обсудить проект</span></button>
             </div>
             <div class="services__content" data-services-container="">
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_1.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_1.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Индивидуальное проектирование</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Индивидуальное проектирование</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_2.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_2.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Дизайн-проект</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Дизайн-проект</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_3.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_3.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Земляные работы</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Земляные работы</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_4.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_4.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Фундамент <br> (все виды)</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Фундамент <br> (все виды)</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_5.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_5.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Возведение стен <br> и кровли</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Возведение стен <br> и кровли</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_6.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_6.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Фасад</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Фасад</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_7.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_7.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Установка террас <br> и навесов</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Установка террас <br> и навесов</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_8.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_8.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Коммуникации</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Коммуникации</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_9.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_9.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Благоустройство</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Благоустройство</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_10.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_10.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Ландшафтный дизайн</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Ландшафтный дизайн</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
-                      <div class="services_card">
-                        <div class="services_card__icon"><img class="image" data-src="/assets/img/services_icon_11.svg" alt="" data-lazy=""/>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_11.svg" alt="" data-lazy=""/>
                         </div>
-                        <p class="services_card__title">Мебель и отделка</p>
-                        <p class="services_card__text">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Мебель и отделка</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
                       </div>
               <button class="services__load_btn services__load_btn--desktop" data-services-btn><span class="text text--1">Показать все <br> наши услуги </span><span class="text text--2">Скрыть <br> остальные услуги</span>
                 <svg class="arrow">
@@ -508,20 +638,20 @@
                 </svg>
               </button>
             </div>
-            <button class="services__load_btn services__load_btn--mobile btn btn--outlined" data-services-btn><span class="btn__text text--1">Показать еще</span><span class="btn__text text--2">Скрыть</span></button>
+            <button class="services__load_btn services__load_btn--mobile btn btn--outlined" data-scroll="" data-scroll-fadeup="" data-services-btn><span class="btn__text text--1">Показать еще</span><span class="btn__text text--2">Скрыть</span></button>
           </div>
         </section>
         <section class="section technologies" id="tech" data-scroll-id="tech">
           <div class="technologies__container container"> 
             <div class="section_block">
-              <div class="section_block__caption">Технологии</div>
-              <h2 class="section_block__title">Передовые <strong>технологии строительства</strong></h2>
+              <div class="section_block__caption" data-scroll="" data-scroll-fadeup="">Технологии</div>
+              <h2 class="section_block__title" data-scroll="" data-scroll-fadeup="">Передовые <strong>технологии строительства</strong></h2>
             </div>
             <div class="technologies__content technologies__slider">
               <div class="swiper-wrapper">
-                        <div class="technologies_block swiper-slide">
-                          <h3 class="technologies_block__title">Дом из бруса</h3>
-                          <p class="technologies_block__text">Брус – готовый пиломатериал, изготовленный из цельного древесного массива. Данный материал отличается долговечностью, экологичностью и простотой монтажа</p>
+                        <div class="technologies_block swiper-slide" data-scroll="" data-scroll-fadeup="">
+                          <h3 class="technologies_block__title" data-scroll="" data-scroll-fadeup="">Дом из бруса</h3>
+                          <p class="technologies_block__text" data-scroll="" data-scroll-fadeup="">Брус – готовый пиломатериал, изготовленный из цельного древесного массива. Данный материал отличается долговечностью, экологичностью и простотой монтажа</p>
                           <div class="technologies_block__img">
                             <picture class="image">
                               <source data-lazy="data-lazy" data-srcset="/assets/img/tech_img_1.webp" type="image/webp"/>
@@ -529,9 +659,9 @@
                             </picture>
                           </div>
                         </div>
-                        <div class="technologies_block swiper-slide">
-                          <h3 class="technologies_block__title">Дом из монолита</h3>
-                          <p class="technologies_block__text">Монолитный дом — это цельное железобетонное сооружение. Его стены и перекрытия не собраны из отдельных элементов, а отлиты из бетонной массы.</p>
+                        <div class="technologies_block swiper-slide" data-scroll="" data-scroll-fadeup="">
+                          <h3 class="technologies_block__title" data-scroll="" data-scroll-fadeup="">Дом из монолита</h3>
+                          <p class="technologies_block__text" data-scroll="" data-scroll-fadeup="">Монолитный дом — это цельное железобетонное сооружение. Его стены и перекрытия не собраны из отдельных элементов, а отлиты из бетонной массы.</p>
                           <div class="technologies_block__img">
                             <picture class="image">
                               <source data-lazy="data-lazy" data-srcset="/assets/img/tech_img_2.webp" type="image/webp"/>
@@ -539,9 +669,9 @@
                             </picture>
                           </div>
                         </div>
-                        <div class="technologies_block swiper-slide">
-                          <h3 class="technologies_block__title">Дом из блока</h3>
-                          <p class="technologies_block__text">Монолитный дом — это цельное железобетонное сооружение. Его стены и перекрытия не собраны из отдельных элементов, а отлиты из бетонной массы.</p>
+                        <div class="technologies_block swiper-slide" data-scroll="" data-scroll-fadeup="">
+                          <h3 class="technologies_block__title" data-scroll="" data-scroll-fadeup="">Дом из блока</h3>
+                          <p class="technologies_block__text" data-scroll="" data-scroll-fadeup="">Монолитный дом — это цельное железобетонное сооружение. Его стены и перекрытия не собраны из отдельных элементов, а отлиты из бетонной массы.</p>
                           <div class="technologies_block__img">
                             <picture class="image">
                               <source data-lazy="data-lazy" data-srcset="/assets/img/tech_img_3.webp" type="image/webp"/>
@@ -549,9 +679,9 @@
                             </picture>
                           </div>
                         </div>
-                        <div class="technologies_block swiper-slide">
-                          <h3 class="technologies_block__title">Дом из каркаса</h3>
-                          <p class="technologies_block__text">Брус – готовый пиломатериал, изготовленный из цельного древесного массива. Данный материал отличается долговечностью, экологичностью и простотой монтажа</p>
+                        <div class="technologies_block swiper-slide" data-scroll="" data-scroll-fadeup="">
+                          <h3 class="technologies_block__title" data-scroll="" data-scroll-fadeup="">Дом из каркаса</h3>
+                          <p class="technologies_block__text" data-scroll="" data-scroll-fadeup="">Брус – готовый пиломатериал, изготовленный из цельного древесного массива. Данный материал отличается долговечностью, экологичностью и простотой монтажа</p>
                           <div class="technologies_block__img">
                             <picture class="image">
                               <source data-lazy="data-lazy" data-srcset="/assets/img/tech_img_4.webp" type="image/webp"/>
@@ -560,7 +690,7 @@
                           </div>
                         </div>
               </div>
-              <div class="technologies__pagination slider__pagination"></div>
+              <div class="technologies__pagination slider__pagination" data-scroll="" data-scroll-fadeup=""></div>
             </div>
           </div>
         </section>
@@ -568,32 +698,32 @@
           <div class="advantages__container container"> 
             <div class="advantages__content"> 
               <div class="section_block">
-                <div class="section_block__caption">Преимущества</div>
-                <h2 class="section_block__title">Возьмемся <br class="desktop"> за дело <strong>любой сложности</strong></h2>
-                <p class="section_block__text section_block__text--black">Обладаем всем необходимым, чтобы квалифицированно реализовать <br class="desktop"> проект любой степени сложности для своих клиентов</p>
+                <div class="section_block__caption" data-scroll="" data-scroll-fadeup="">Преимущества</div>
+                <h2 class="section_block__title" data-scroll="" data-scroll-fadeup="">Возьмемся <br class="desktop"> за дело <strong>любой сложности</strong></h2>
+                <p class="section_block__text section_block__text--black" data-scroll="" data-scroll-fadeup="">Обладаем всем необходимым, чтобы квалифицированно реализовать <br class="desktop"> проект любой степени сложности для своих клиентов</p>
               </div>
-              <div class="advantages__gallery"> <a class="advantages__skip_btn" href="#tech" data-anchor="tech">Пропустить</a>
-                <div class="advantages__slider slider swiper"> 
+              <div class="advantages__gallery"> <a class="advantages__skip_btn" href="#tech" data-anchor="tech" data-scroll="" data-scroll-fadeup="">Пропустить</a>
+                <div class="advantages__slider slider swiper" data-scroll="" data-scroll-fadeup=""> 
                   <div class="swiper-wrapper"> 
-                            <div class="advantages_card services_card swiper-slide">
+                            <div class="advantages_card services_card swiper-slide" data-scroll="" data-scroll-fadeup="">
                               <div class="services_card__icon"><img class="image" data-src="/assets/img/advan_icon_1.svg" alt="" data-lazy=""/>
                               </div>
                               <p class="services_card__title">Выполняем строительство <br> дома «под ключ»</p>
                               <p class="services_card__text">Берем на себя все этапы строительства и любые сложности. Клиенту доставляется полностью готовый дом, готовый к проживанию</p>
                             </div>
-                            <div class="advantages_card services_card swiper-slide">
+                            <div class="advantages_card services_card swiper-slide" data-scroll="" data-scroll-fadeup="">
                               <div class="services_card__icon"><img class="image" data-src="/assets/img/advan_icon_2.svg" alt="" data-lazy=""/>
                               </div>
                               <p class="services_card__title">Имеем большой опыт в сфере строительства</p>
                               <p class="services_card__text">Берем на себя все этапы строительства и любые сложности. Клиенту доставляется полностью готовый дом, готовый к проживанию</p>
                             </div>
-                            <div class="advantages_card services_card swiper-slide">
+                            <div class="advantages_card services_card swiper-slide" data-scroll="" data-scroll-fadeup="">
                               <div class="services_card__icon"><img class="image" data-src="/assets/img/advan_icon_3.svg" alt="" data-lazy=""/>
                               </div>
                               <p class="services_card__title">Имеем собственный <br> автопарк техники</p>
                               <p class="services_card__text">Берем на себя все этапы строительства и любые сложности. Клиенту доставляется полностью готовый дом, готовый к проживанию</p>
                             </div>
-                            <div class="advantages_card services_card swiper-slide">
+                            <div class="advantages_card services_card swiper-slide" data-scroll="" data-scroll-fadeup="">
                               <div class="services_card__icon"><img class="image" data-src="/assets/img/advan_icon_4.svg" alt="" data-lazy=""/>
                               </div>
                               <p class="services_card__title">Экономия на аренде <br> и логистике</p>
@@ -608,23 +738,23 @@
         <section class="section about" id="about">
           <div class="about__container container"> 
             <div class="section_block">
-              <div class="section_block__caption">О компании</div>
-              <h2 class="section_block__title">Помогаем воплощать <br> <strong>мечты <br class="mobile"> в реальность</strong></h2>
+              <div class="section_block__caption" data-scroll="" data-scroll-fadeup="">О компании</div>
+              <h2 class="section_block__title" data-scroll="" data-scroll-fadeup="">Помогаем воплощать <br> <strong>мечты <br class="mobile"> в реальность</strong></h2>
             </div>
             <div class="about__content" data-scroll="" data-scroll-call="initCounter" data-counter-start="">
-              <div class="about_card">
+              <div class="about_card" data-scroll="" data-scroll-fadeup="">
                 <div class="about_card__top"> 
                   <div class="about_card__number" data-counter="" data-start="0" data-end="100" data-difference="12" data-time-delay="3500" data-before-text="&gt;">0 </div><span class="about_card__number about_card__number--small">домов</span>
                 </div>
                 <p class="about_card__text">Построили для собственных клиентов под любой запрос за все время нашей работы</p>
               </div>
-              <div class="about_card">
+              <div class="about_card" data-scroll="" data-scroll-fadeup="">
                 <div class="about_card__top"> 
                   <div class="about_card__number" data-counter="" data-start="0" data-end="240" data-difference="30" data-time-delay="3500" data-add-text="+">0 </div><span class="about_card__number about_card__number--small">семей</span>
                 </div>
                 <p class="about_card__text">Обрели свой собственный, современный <br class="desktop"> и экологичный дом для счастливой жизни</p>
               </div>
-              <div class="about_card">
+              <div class="about_card" data-scroll="" data-scroll-fadeup="">
                 <div class="about_card__top"> 
                   <div class="about_card__number" data-counter="" data-start="0" data-end="8" data-difference="1" data-time-delay="3500">0 </div><span class="about_card__number about_card__number--small">лет</span>
                 </div>
@@ -635,22 +765,22 @@
         </section>
         <section class="section partners">
           <div class="partners__container container"> 
-            <p class="partners__caption">Наши партнеры</p>
+            <p class="partners__caption" data-scroll="" data-scroll-fadeup="">Наши партнеры</p>
             <div class="partners__table"> 
-              <div class="partners__table_img"><img class="image" data-src="/assets/img/partners_pic_1.svg" alt="" data-lazy=""/>
+              <div class="partners__table_img" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/partners_pic_1.svg" alt="" data-lazy=""/>
               </div>
-              <div class="partners__table_img"><img class="image" data-src="/assets/img/partners_pic_2.svg" alt="" data-lazy=""/>
+              <div class="partners__table_img" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/partners_pic_2.svg" alt="" data-lazy=""/>
               </div>
-              <div class="partners__table_img"><img class="image" data-src="/assets/img/partners_pic_3.svg" alt="" data-lazy=""/>
+              <div class="partners__table_img" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/partners_pic_3.svg" alt="" data-lazy=""/>
               </div>
-              <div class="partners__table_img"><img class="image" data-src="/assets/img/partners_pic_4.svg" alt="" data-lazy=""/>
+              <div class="partners__table_img" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/partners_pic_4.svg" alt="" data-lazy=""/>
               </div>
-              <div class="partners__table_img"><img class="image" data-src="/assets/img/partners_pic_5.svg" alt="" data-lazy=""/>
+              <div class="partners__table_img" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/partners_pic_5.svg" alt="" data-lazy=""/>
               </div>
-              <div class="partners__table_img"><img class="image" data-src="/assets/img/partners_pic_6.svg" alt="" data-lazy=""/>
+              <div class="partners__table_img" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/partners_pic_6.svg" alt="" data-lazy=""/>
               </div>
             </div>
-            <div class="clients__slider slider swiper">
+            <div class="clients__slider slider swiper" data-scroll="" data-scroll-fadeup="">
               <div class="swiper-wrapper">
                         <div class="clients_slide swiper-slide">
                           <div class="clients_slide__img">
@@ -705,21 +835,21 @@
                 </button>
               </div>
             </div>
-            <div class="clients__pagination slider__pagination"></div>
+            <div class="clients__pagination slider__pagination" data-scroll="" data-scroll-fadeup=""></div>
             <div class="partners__bottom"> 
-              <div class="partners_discuss">
-                <div class="partners_discuss__tag">
+              <div class="partners_discuss" data-scroll="" data-scroll-fadeup="">
+                <div class="partners_discuss__tag" data-scroll="" data-scroll-fadeup="">
                   <div class="dot"></div>
                   <div class="text">Наши менеджеры готовы помочь</div>
                 </div>
-                <h3 class="partners_discuss__title">Ответим на ваши вопросы <br class="desktop"> и поможем <br class="mobile"> с выбором</h3>
-                <p class="partners_discuss__text">Мы понимаем, что определиться самостоятельно бывает сложно. <br class="desktop"> Мы всегда готовы помочь вам, ответить на все вопросы <br class="desktop"> и подсказать оптимальный вариант для ваших нужд</p>
-                <button class="partners_discuss__btn btn btn--white" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+                <h3 class="partners_discuss__title" data-scroll="" data-scroll-fadeup="">Ответим на ваши вопросы <br class="desktop"> и поможем <br class="mobile"> с выбором</h3>
+                <p class="partners_discuss__text" data-scroll="" data-scroll-fadeup="">Мы понимаем, что определиться самостоятельно бывает сложно. <br class="desktop"> Мы всегда готовы помочь вам, ответить на все вопросы <br class="desktop"> и подсказать оптимальный вариант для ваших нужд</p>
+                <button class="partners_discuss__btn btn btn--white" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Ответим на ваши вопросы и поможем с выбором (низ главной страницы)&quot;}]"><span class="btn__text">Обсудить проект</span></button>
               </div>
-              <div class="partners_promo">
-                <h3 class="partners_discuss__title partners_discuss__title--promo">Время осуществить <br> свою мечту</h3>
-                <p class="partners_discuss__text partners_discuss__text--promo">Обретите свой собственный, современный <br> и экологичный дом для счастливой жизни</p>
-                <div class="types_card__img types_card__img--promo">
+              <div class="partners_promo" data-scroll="" data-scroll-fadeup="">
+                <h3 class="partners_discuss__title partners_discuss__title--promo" data-scroll="" data-scroll-fadeup="">Время осуществить <br> свою мечту</h3>
+                <p class="partners_discuss__text partners_discuss__text--promo" data-scroll="" data-scroll-fadeup="">Обретите свой собственный, современный <br> и экологичный дом для счастливой жизни</p>
+                <div class="types_card__img types_card__img--promo" data-scroll="" data-scroll-fadeup="">
                   <picture class="image">
                     <source data-lazy="data-lazy" data-srcset="/assets/img/types_pic_2.webp" type="image/webp"/>
                     <source data-lazy="data-lazy" data-srcset="/assets/img/types_pic_2.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/types_pic_2.png" alt=""/>
@@ -733,7 +863,7 @@
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__table">
-            <button class="footer__project_btn" data-linked-modal="modal_project">
+            <button class="footer__project_btn" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Футер&quot;}]">
               <svg class="arrow arrow--white">
                 <use xlink:href="#arrow_diagon"></use>
               </svg><img class="arrow arrow--gradient" data-src="/assets/img/arrow_diagon_gradient.svg" alt="" data-lazy=""/><span class="text">Обсудить проект</span>

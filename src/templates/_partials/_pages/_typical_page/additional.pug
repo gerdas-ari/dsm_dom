@@ -1,0 +1,25 @@
+mixin servicesCard(icon, title, text)
+	.services_card(data-scroll="", data-scroll-fadeup="")
+		.services_card__icon(data-scroll="", data-scroll-fadeup="")
+			+imgSvg(icon, '', 'image')
+		p.services_card__title(data-scroll="", data-scroll-fadeup="")!= title
+		p.services_card__text(data-scroll="", data-scroll-fadeup="")!= text
+
+section.services.additional(data-load-more-container="")
+	.services__container.container 
+
+		.section_block
+			h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Дополнительные работы
+
+		.services__content(data-services-container="")
+			+servicesCard(`${assetsPath}/img/services_icon_7.svg`, 'Подготовительные работы', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/addit_icon_1.svg`, 'Подвод и монтаж коммуникаций', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_6.svg`, 'Внешняя и внутренняя отделка', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/addit_icon_2.svg`, 'Изготовление и установка забора', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/services_icon_3.svg`, 'Благоустройство территории', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+			+servicesCard(`${assetsPath}/img/addit_icon_3.svg`, 'Наружное <br> освещение', 'Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет')
+
+		button.services__load_btn.services__load_btn--mobile.btn.btn--outlined(data-scroll="", data-scroll-fadeup="", data-services-btn)
+			span.btn__text.text--1 Показать еще
+			span.btn__text.text--2 Скрыть
+			

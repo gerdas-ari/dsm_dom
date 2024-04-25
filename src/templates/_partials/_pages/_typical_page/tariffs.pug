@@ -1,0 +1,104 @@
+section.section.tariffs
+	.tariffs__container.container 
+		h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Выберите комплектацию
+
+		.tariffs__content.swiper.slider 
+			.swiper-wrapper
+		   
+				.tariffs_card.swiper-slide(data-scroll="", data-scroll-fadeup="")
+					.tariffs_card__top
+						h3.tariffs_card__title(data-scroll="", data-scroll-fadeup="") Холодный контур
+						p.tariffs_card__text(data-scroll="", data-scroll-fadeup="") Проектировка и постройка холодного каркаса вашего будущего дома
+						span.tariffs_card__title.tariffs_card__title--price(data-scroll="", data-scroll-fadeup="") от 2 000 000 ₽
+					
+					.tariffs_card__info
+						ul.tariffs_card__list 
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Фундамент
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Стены
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Высота этажей
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Стропильная система
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Кровля
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Логистика и работы включены
+
+						button.tariffs_card__btn.btn.btn--filled(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_order", data-modal-set-inputs=`[{"key":"block","value":"Типовой проект, холодный контур"}]`)
+							span.btn__text Заказать
+			
+				.tariffs_card.swiper-slide(data-scroll="", data-scroll-fadeup="")
+					.tariffs_card__top
+						h3.tariffs_card__title(data-scroll="", data-scroll-fadeup="") Теплый контур
+						p.tariffs_card__text(data-scroll="", data-scroll-fadeup="") Полностью завершенная внешняя отделка дома и его утепление
+						span.tariffs_card__title.tariffs_card__title--price(data-scroll="", data-scroll-fadeup="") от 2 500 000 ₽
+					
+					.tariffs_card__info
+						ul.tariffs_card__list 
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Все, что входит в пакет #[br] #[span.bold “Холодный контур”]
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Энергосберегающие окна
+
+						button.tariffs_card__btn.btn.btn--filled(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_order", data-modal-set-inputs=`[{"key":"block","value":"Типовой проект, теплый контур"}]`)
+							span.btn__text Заказать
+			
+				.tariffs_card.tariffs_card--green.swiper-slide(data-scroll="", data-scroll-fadeup="")
+					.tariffs_card__top
+						h3.tariffs_card__title(data-scroll="", data-scroll-fadeup="").tariffs_card__title--white White Box #[+svg('fire', 'icon')]
+						p.tariffs_card__text.tariffs_card__text--white(data-scroll="", data-scroll-fadeup="") Полностью готовый к ремонту дом, с проведенными в него коммуникациями
+						span.tariffs_card__title.tariffs_card__title--price.tariffs_card__title--white(data-scroll="", data-scroll-fadeup="") от 3 000 000 ₽
+					
+					.tariffs_card__info
+						ul.tariffs_card__list 
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Все, что входит в пакет #[br] #[span.bold “Холодный контур”] и #[span.bold Тёплый контур”]
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Инженерные сети
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Черновая отделка
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Внешняя чистовая отделка
+
+						button.tariffs_card__btn.btn.btn--filled(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_order", data-modal-set-inputs=`[{"key":"block","value":"Типовой проект, white box"}]`)
+							span.btn__text Заказать
+			
+				.tariffs_card.swiper-slide(data-scroll="", data-scroll-fadeup="")
+					.tariffs_card__top
+						h3.tariffs_card__title(data-scroll="", data-scroll-fadeup="") Под тапочки
+						p.tariffs_card__text(data-scroll="", data-scroll-fadeup="") Полностью завершенный проект. Мы берем на себя все работы и вы получаете готовый дом
+						span.tariffs_card__title.tariffs_card__title--price(data-scroll="", data-scroll-fadeup="") Индивидуально
+					
+					.tariffs_card__info
+						ul.tariffs_card__list 
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Все, что входит во #[span.bold все пакеты]
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Внутренняя чистовая отделка
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Мебель и сантехника
+							li.tariffs_card__item(data-scroll="", data-scroll-fadeup="")
+								+imgSvg(`${assetsPath}/img/icon_plus.svg`, '', 'icon')
+								p.tariffs_card__text.tariffs_card__text--list Обустройство территории
+
+						button.tariffs_card__btn.btn.btn--filled(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_order", data-modal-set-inputs=`[{"key":"block","value":"Типовой проект, полностью завершенный"}]`)
+							span.btn__text Заказать
+
+			.tariffs__pagination.slider__pagination(data-scroll="", data-scroll-fadeup="")

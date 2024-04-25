@@ -1,0 +1,37 @@
+section.section.materials
+	.materials__container.container(data-tab-wrapper="") 
+		h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Планировки
+
+		.materials__content 
+			.materials__inner.slider.swiper.is-active(data-tab="1", data-gallery-slides='["/assets/img/gen_info_pic.jpg","/assets/img/gen_info_pic.jpg"]')
+				
+				.swiper-wrapper
+					.materials__img.swiper-slide(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_gallery", data-id="0")
+						button.general_info_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+							+svg('full', 'icon')
+						+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+					.materials__img.swiper-slide(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_gallery", data-id="0")
+						button.general_info_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+							+svg('full', 'icon')
+						+img(`${assetsPath}/img/gen_info_pic.jpg`, '', 'image')
+
+				.materials__pagination.slider__pagination
+
+		
+		.partners__bottom 
+			.partners_discuss(data-scroll="", data-scroll-fadeup="")
+				.partners_discuss__tag(data-scroll="", data-scroll-fadeup="")
+					.dot
+					.text Наши менеджеры готовы помочь
+
+				h3.partners_discuss__title(data-scroll="", data-scroll-fadeup="") Ответим на ваши вопросы #[br.desktop] и поможем #[br.mobile] с выбором
+				p.partners_discuss__text(data-scroll="", data-scroll-fadeup="") Мы понимаем, что определиться самостоятельно бывает сложно. #[br.desktop] Мы всегда готовы помочь вам, ответить на все вопросы #[br.desktop] и подсказать оптимальный вариант для ваших нужд
+				button.partners_discuss__btn.btn.btn--white(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_project", data-modal-set-inputs=`[{"key":"block","value":"Ответим на ваши вопросы и поможем с выбором (низ страницы индивидуального проекта)"}]`)
+					span.btn__text Обсудить проект
+
+			.partners_promo(data-scroll="", data-scroll-fadeup="")
+				h3.partners_discuss__title.partners_discuss__title--promo(data-scroll="", data-scroll-fadeup="") Время осуществить #[br] свою мечту
+				p.partners_discuss__text.partners_discuss__text--promo(data-scroll="", data-scroll-fadeup="") Обретите свой собственный, современный #[br] и экологичный дом для счастливой жизни
+				.types_card__img.types_card__img--promo(data-scroll="", data-scroll-fadeup="")
+					+img(`${assetsPath}/img/types_pic_2.png`, '', 'image')
+

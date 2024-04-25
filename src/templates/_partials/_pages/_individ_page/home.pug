@@ -1,0 +1,29 @@
+section.home.home_project
+	.home__bg
+		+img(`${assetsPath}/img/home_bg_4.jpg`, '', 'image')
+	.home__container.container 
+
+		.section_block.section_block--center 
+			p.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Индивидуальный проект
+			h1.section_block__title(data-scroll="", data-scroll-fadeup="") Люксембург
+
+		.home_project__table(data-scroll="", data-scroll-fadeup="")
+			.home_project__item(data-scroll="", data-scroll-fadeup="") 
+				p.home_project__caption Общая площадь
+				p.home_project__text 90м²
+				
+			.home_project__item(data-scroll="", data-scroll-fadeup="")
+				p.home_project__caption Срок строительства
+				p.home_project__text 70 дней
+			
+			.home_project__item(data-scroll="", data-scroll-fadeup="")
+				p.home_project__caption Технология
+				p.home_project__text Брус
+			
+			.home_project__item(data-scroll="", data-scroll-fadeup="")
+				p.home_project__caption Стоимость
+				p.home_project__text Индивидуально
+
+			button.home_project__btn.btn.btn--white(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_order", data-modal-set-inputs=`[{"key":"block","value":"Индивидуальный проект, первый блок"}]`)
+				span.btn__text Заказать проект
+		

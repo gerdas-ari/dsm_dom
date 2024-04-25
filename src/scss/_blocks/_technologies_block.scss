@@ -9,7 +9,9 @@
     position: relative;
 
     @media(max-width: 500px) {
-        //background: #F9F9FB;
+        background: #F9F9FB;
+
+        height: auto;
 
         padding: em(32) em(20) em(262);
     }
@@ -83,7 +85,7 @@
 
             right: auto;
             left: 50%;
-            bottom: -13.625em;
+            bottom: -13em;
             transform: translateX(-50%);
         }
     }

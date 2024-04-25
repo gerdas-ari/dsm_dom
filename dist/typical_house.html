@@ -87,7 +87,7 @@
             <div class="footer__links_item footer__links_item--last"> 
               <p class="footer__text footer__text--caption">Адрес</p><a class="footer__link footer__link--small" href="https://yandex.ru/maps/-/CDVmVIME" target="_blank">г. Владивосток, <br> пр-кт Красного знамени 114А, оф. 401</a>
             </div>
-            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Меню&quot;}]"><span class="btn__text">Обсудить проект</span></button>
           </div>
         </div>
       </div>
@@ -99,6 +99,7 @@
           </picture>
         </div>
         <form class="modal_form__form" data-form-id="modal_project">
+          <input type="hidden" name="block" value="">
           <input type="hidden" name="form" value="Обсудить проект">
           <button class="modal_close modal_form__close" data-modal-close="">
             <svg class="icon">
@@ -126,6 +127,73 @@
           <p class="modal_form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь c <a class="link" href="/privacy">политикой конфиденциальности</a></p>
         </form>
       </div>
+      <div class="modal_order modal_form modal" data-modal="modal_order" action="/mailer" data-mailer="">
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/modal_form_pic.jpg" alt=""/>
+          </picture>
+        </div>
+        <form class="modal_form__form" data-form-id="modal_order">
+          <input type="hidden" name="block" value="">
+          <input type="hidden" name="form" value="Заказать проект">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <h3 class="modal_form__title">Заказать проект</h3>
+          <p class="modal_form__text section_block__text">Мы всегда готовы помочь! Оставьте свою заявку, после чего <br class="desktop"> наши менеджеры свяжутся с вами в ближайшее время</p>
+          <div class="modal_form__inputs">
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Номер телефона</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="comment" placeholder="Комментарий"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="modal_form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь c <a class="link" href="/privacy">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+      <div class="modal modal_gallery" data-modal="modal_gallery">
+        <button class="modal_close modal_gallery__close" data-modal-close>
+          <svg class="icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <div class="swiper slider_gallery">
+          <div class="swiper-wrapper"></div>
+        </div>
+        <div class="slider_gallery__pagination slider__pagination"></div>
+      </div>
+      <div class="modal_success modal_form modal" data-modal="modal_success" action="/mailer" data-mailer="">
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/modal_form_pic.jpg" alt=""/>
+          </picture>
+        </div>
+        <div class="modal_form__form modal_form__form--success">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <div class="modal_form__icon"><img class="image" data-src="/assets/img/icon_success.svg" alt="" data-lazy=""/>
+          </div>
+          <h3 class="modal_form__title">Заявка отправлена</h3>
+          <p class="modal_form__text section_block__text">Спасибо! Наши менеджеры свяжутся с вами в ближайшее <br class="desktop"> время, сразу после обработки вашей заявки</p>
+          <button class="modal_form__btn btn btn--filled" data-modal-close=""><span class="btn__text">Отлично</span></button>
+        </div>
+      </div>
     </div>
     <div class="content">
       <header class="header header--blur">
@@ -134,7 +202,28 @@
             <nav class="header__nav"><a class="header__nav_link header__nav_link--dot" href="#catalog">
                 <div class="dot"></div> Проекты</a><a class="header__nav_link" href="#services">Услуги</a><a class="header__nav_link" href="#tech">Технологии</a><a class="header__nav_link" href="#advantages">Преимущества</a><a class="header__nav_link" href="#about">О компании</a></nav>
             <div class="header__socials"> <a class="header__socials_link header__nav_link" href="tel:+7 914 326 40-47">+7 914 326 40-47</a><a class="header__socials_link header__nav_link" href="mailto:dsmhouse@mail.com">dsmhouse@mail.com</a>
-              <button class="header__btn btn btn--filled" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+              <button class="header__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Хедер&quot;}]"><span class="btn__text">Обсудить проект</span></button>
+            </div>
+            <div class="header__mob"><a class="header__call" href="tel:+7 914 326 40-47">
+                <svg class="icon">
+                  <use xlink:href="#phone"></use>
+                </svg></a>
+              <button class="header__menu" data-linked-modal="modal_menu">
+                <svg class="icon">
+                  <use xlink:href="#menu"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header header--white">
+        <div class="header__container container">
+          <div class="header__line"> <a class="header__logo" href="/"><img class="image" data-src="/assets/img/black_logo.svg" alt="" data-lazy=""/></a>
+            <nav class="header__nav"><a class="header__nav_link header__nav_link--dot" href="#catalog">
+                <div class="dot"></div> Проекты</a><a class="header__nav_link" href="#services">Услуги</a><a class="header__nav_link" href="#tech">Технологии</a><a class="header__nav_link" href="#advantages">Преимущества</a><a class="header__nav_link" href="#about">О компании</a></nav>
+            <div class="header__socials"> <a class="header__socials_link header__nav_link" href="tel:+7 914 326 40-47">+7 914 326 40-47</a><a class="header__socials_link header__nav_link" href="mailto:dsmhouse@mail.com">dsmhouse@mail.com</a>
+              <button class="header__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Хедер&quot;}]"><span class="btn__text">Обсудить проект</span></button>
             </div>
             <div class="header__mob"><a class="header__call" href="tel:+7 914 326 40-47">
                 <svg class="icon">
@@ -162,24 +251,24 @@
               <p class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Типовой проект</p>
               <h1 class="section_block__title" data-scroll="" data-scroll-fadeup="">Лесогорский</h1>
             </div>
-            <div class="home_project__table">
-              <div class="home_project__item"> 
+            <div class="home_project__table" data-scroll="" data-scroll-fadeup="">
+              <div class="home_project__item" data-scroll="" data-scroll-fadeup=""> 
                 <p class="home_project__caption">Общая площадь</p>
                 <p class="home_project__text">90м²</p>
               </div>
-              <div class="home_project__item"> 
+              <div class="home_project__item" data-scroll="" data-scroll-fadeup=""> 
                 <p class="home_project__caption">Срок строительства</p>
                 <p class="home_project__text">70 дней</p>
               </div>
-              <div class="home_project__item"> 
+              <div class="home_project__item" data-scroll="" data-scroll-fadeup=""> 
                 <p class="home_project__caption">Технология</p>
                 <p class="home_project__text">Брус</p>
               </div>
-              <div class="home_project__item"> 
+              <div class="home_project__item" data-scroll="" data-scroll-fadeup=""> 
                 <p class="home_project__caption">Стоимость</p>
                 <p class="home_project__text">от 3 620 000 ₽</p>
               </div>
-              <button class="home_project__btn btn btn--white" data-linked-modal="modal_project"><span class="btn__text">Заказать проект</span></button>
+              <button class="home_project__btn btn btn--white" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_order" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Типовой проект, первый блок&quot;}]"><span class="btn__text">Заказать проект</span></button>
             </div>
           </div>
         </section>
@@ -188,10 +277,10 @@
             <div class="general_info__content">
               <div class="general_info__left">
                 <div class="section_block">
-                  <h2 class="section_block__title section_block__title--small">Общая <br class="mobile"> информация</h2>
-                  <p class="section_block__text">Проект современного одноэтажного частного дома</p>
+                  <h2 class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Общая <br class="mobile"> информация</h2>
+                  <p class="section_block__text" data-scroll="" data-scroll-fadeup="">Проект современного одноэтажного частного дома</p>
                 </div>
-                <div class="general_info__gallery"> 
+                <div class="general_info__gallery" data-scroll="" data-scroll-fadeup=""> 
                   <div class="general_info_slider slider swiper" data-gallery-slides="[&quot;/assets/img/gen_info_pic.jpg&quot;,&quot;/assets/img/gen_info_pic.jpg&quot;]">
                     <button class="general_info_slider__full" data-full-button="" data-linked-modal="modal_gallery">
                       <svg class="icon">
@@ -289,11 +378,323 @@
             </div>
           </div>
         </section>
+        <section class="section materials">
+          <div class="materials__container container" data-tab-wrapper=""> 
+            <h2 class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Материалы <br class="mobile"> по проекту</h2>
+            <div class="materials__tabs" data-scroll="" data-scroll-fadeup=""> 
+              <button class="materials__tabs_btn" data-tab-id="1">Планировки</button>
+              <button class="materials__tabs_btn is-active" data-tab-id="2">Фасады</button>
+            </div>
+            <div class="materials__content" data-scroll="" data-scroll-fadeup=""> 
+              <div class="materials__inner slider swiper" data-tab="1" data-gallery-slides="[&quot;/assets/img/gen_info_pic.jpg&quot;,&quot;/assets/img/gen_info_pic.jpg&quot;,&quot;/assets/img/gen_info_pic.jpg&quot;,&quot;/assets/img/gen_info_pic.jpg&quot;]">
+                <div class="swiper-wrapper">
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="0">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="1">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="2">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="3">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic.jpg" alt=""/>
+                    </picture>
+                  </div>
+                </div>
+                <div class="materials__pagination slider__pagination"></div>
+              </div>
+              <div class="materials__inner slider swiper is-active" data-tab="2" data-gallery-slides="[&quot;/assets/img/home_bg_3.jpg&quot;,&quot;/assets/img/home_bg_3.jpg&quot;,&quot;/assets/img/home_bg_3.jpg&quot;,&quot;/assets/img/home_bg_3.jpg&quot;]">
+                <div class="swiper-wrapper">
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="0">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_bg_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="1">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_bg_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="2">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_bg_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="materials__img swiper-slide" data-linked-modal="modal_gallery" data-id="3">
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/home_bg_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_bg_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                </div>
+                <div class="materials__pagination slider__pagination"></div>
+              </div>
+            </div>
+            <div class="materials_about" data-load-more-container="">
+              <h2 class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Описание <br class="mobile"> проекта</h2>
+              <div class="materials_about__right">
+                <div class="materials_about__wrap" data-scroll="" data-scroll-fadeup="" data-services-container=""> 
+                  <p class="section_block__text section_block__text--black materials_about__text">Дом подойдет для комфортной жизни семьи из 4-5 человек. Проект выполнен в стиле шале: первый этаж сделан из керамических блоков, а второй — из дерева. Главный плюс таких домов — в компромиссе при выборе материала. Керамический блок позволяет экспериментировать с внутренней отделкой первого этажа. А клееный брус создаст уют деревянного дома на втором этаже, где расположены спальни. Дом подойдет для комфортной жизни семьи из 4-5 человек. Проект выполнен в стиле шале: первый этаж сделан из керамических блоков, а второй — из дерева. Главный плюс таких домов — в компромиссе при выборе материала. Керамический блок позволяет экспериментировать с внутренней отделкой первого этажа. А клееный брус создаст уют деревянного дома на втором этаже, где расположены спальни.</p>
+                </div>
+                <button class="materials_about__btn_more" data-scroll="" data-scroll-fadeup="" data-services-btn=""> <span class="text--1">Читать полностью</span><span class="text--2">Скрыть</span></button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section tariffs">
+          <div class="tariffs__container container"> 
+            <h2 class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Выберите комплектацию</h2>
+            <div class="tariffs__content swiper slider"> 
+              <div class="swiper-wrapper">
+                <div class="tariffs_card swiper-slide" data-scroll="" data-scroll-fadeup="">
+                  <div class="tariffs_card__top">
+                    <h3 class="tariffs_card__title" data-scroll="" data-scroll-fadeup="">Холодный контур</h3>
+                    <p class="tariffs_card__text" data-scroll="" data-scroll-fadeup="">Проектировка и постройка холодного каркаса вашего будущего дома</p><span class="tariffs_card__title tariffs_card__title--price" data-scroll="" data-scroll-fadeup="">от 2 000 000 ₽</span>
+                  </div>
+                  <div class="tariffs_card__info">
+                    <ul class="tariffs_card__list"> 
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Фундамент</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Стены</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Высота этажей</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Стропильная система</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Кровля</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Логистика и работы включены</p>
+                      </li>
+                    </ul>
+                    <button class="tariffs_card__btn btn btn--filled" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_order" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Типовой проект, холодный контур&quot;}]"><span class="btn__text">Заказать</span></button>
+                  </div>
+                </div>
+                <div class="tariffs_card swiper-slide" data-scroll="" data-scroll-fadeup="">
+                  <div class="tariffs_card__top">
+                    <h3 class="tariffs_card__title" data-scroll="" data-scroll-fadeup="">Теплый контур</h3>
+                    <p class="tariffs_card__text" data-scroll="" data-scroll-fadeup="">Полностью завершенная внешняя отделка дома и его утепление</p><span class="tariffs_card__title tariffs_card__title--price" data-scroll="" data-scroll-fadeup="">от 2 500 000 ₽</span>
+                  </div>
+                  <div class="tariffs_card__info">
+                    <ul class="tariffs_card__list"> 
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Все, что входит в пакет <br> <span class="bold">“Холодный контур”</span></p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Энергосберегающие окна</p>
+                      </li>
+                    </ul>
+                    <button class="tariffs_card__btn btn btn--filled" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_order" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Типовой проект, теплый контур&quot;}]"><span class="btn__text">Заказать</span></button>
+                  </div>
+                </div>
+                <div class="tariffs_card tariffs_card--green swiper-slide" data-scroll="" data-scroll-fadeup="">
+                  <div class="tariffs_card__top">
+                    <h3 class="tariffs_card__title tariffs_card__title--white" data-scroll="" data-scroll-fadeup="">White Box 
+                      <svg class="icon">
+                        <use xlink:href="#fire"></use>
+                      </svg>
+                    </h3>
+                    <p class="tariffs_card__text tariffs_card__text--white" data-scroll="" data-scroll-fadeup="">Полностью готовый к ремонту дом, с проведенными в него коммуникациями</p><span class="tariffs_card__title tariffs_card__title--price tariffs_card__title--white" data-scroll="" data-scroll-fadeup="">от 3 000 000 ₽</span>
+                  </div>
+                  <div class="tariffs_card__info">
+                    <ul class="tariffs_card__list"> 
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Все, что входит в пакет <br> <span class="bold">“Холодный контур”</span> и <span class="bold">Тёплый контур”</span></p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Инженерные сети</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Черновая отделка</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Внешняя чистовая отделка</p>
+                      </li>
+                    </ul>
+                    <button class="tariffs_card__btn btn btn--filled" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_order" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Типовой проект, white box&quot;}]"><span class="btn__text">Заказать</span></button>
+                  </div>
+                </div>
+                <div class="tariffs_card swiper-slide" data-scroll="" data-scroll-fadeup="">
+                  <div class="tariffs_card__top">
+                    <h3 class="tariffs_card__title" data-scroll="" data-scroll-fadeup="">Под тапочки</h3>
+                    <p class="tariffs_card__text" data-scroll="" data-scroll-fadeup="">Полностью завершенный проект. Мы берем на себя все работы и вы получаете готовый дом</p><span class="tariffs_card__title tariffs_card__title--price" data-scroll="" data-scroll-fadeup="">Индивидуально</span>
+                  </div>
+                  <div class="tariffs_card__info">
+                    <ul class="tariffs_card__list"> 
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_check.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Все, что входит во <span class="bold">все пакеты</span></p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Внутренняя чистовая отделка</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Мебель и сантехника</p>
+                      </li>
+                      <li class="tariffs_card__item" data-scroll="" data-scroll-fadeup=""><img class="icon" data-src="/assets/img/icon_plus.svg" alt="" data-lazy=""/>
+                        <p class="tariffs_card__text tariffs_card__text--list">Обустройство территории</p>
+                      </li>
+                    </ul>
+                    <button class="tariffs_card__btn btn btn--filled" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_order" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Типовой проект, полностью завершенный&quot;}]"><span class="btn__text">Заказать</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="tariffs__pagination slider__pagination" data-scroll="" data-scroll-fadeup=""></div>
+            </div>
+          </div>
+        </section>
+        <section class="services additional" data-load-more-container="">
+          <div class="services__container container"> 
+            <div class="section_block">
+              <h2 class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Дополнительные работы</h2>
+            </div>
+            <div class="services__content" data-services-container="">
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_7.svg" alt="" data-lazy=""/>
+                        </div>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Подготовительные работы</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                      </div>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/addit_icon_1.svg" alt="" data-lazy=""/>
+                        </div>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Подвод и монтаж коммуникаций</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                      </div>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_6.svg" alt="" data-lazy=""/>
+                        </div>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Внешняя и внутренняя отделка</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                      </div>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/addit_icon_2.svg" alt="" data-lazy=""/>
+                        </div>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Изготовление и установка забора</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                      </div>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/services_icon_3.svg" alt="" data-lazy=""/>
+                        </div>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Благоустройство территории</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                      </div>
+                      <div class="services_card" data-scroll="" data-scroll-fadeup="">
+                        <div class="services_card__icon" data-scroll="" data-scroll-fadeup=""><img class="image" data-src="/assets/img/addit_icon_3.svg" alt="" data-lazy=""/>
+                        </div>
+                        <p class="services_card__title" data-scroll="" data-scroll-fadeup="">Наружное <br> освещение</p>
+                        <p class="services_card__text" data-scroll="" data-scroll-fadeup="">Спроектируем ваш будущий дом под ваши нужды и подстроимся под бюджет</p>
+                      </div>
+            </div>
+            <button class="services__load_btn services__load_btn--mobile btn btn--outlined" data-scroll="" data-scroll-fadeup="" data-services-btn><span class="btn__text text--1">Показать еще</span><span class="btn__text text--2">Скрыть</span></button>
+          </div>
+        </section>
+        <section class="section partners ready">
+          <div class="partners__container container"> 
+            <h2 class="section_block__title section_block__title--small" data-scroll="" data-scroll-fadeup="">Как выглядят построенные дома</h2>
+            <div class="clients__slider slider swiper" data-scroll="" data-scroll-fadeup="">
+              <div class="swiper-wrapper">
+                        <div class="clients_slide swiper-slide">
+                          <div class="clients_slide__img">
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/clients_pic.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/clients_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/clients_pic.jpg" alt=""/>
+                            </picture>
+                          </div>
+                          <div class="clients_slide__info"> 
+                            <div class="clients_slide__tag">Фотогалерея</div>
+                            <p class="clients_slide__title">Завершенный проект №1</p>
+                            <p class="clients_slide__text">Завершенный типовой проект в частном секторе поселка под Владивостоком</p>
+                          </div>
+                        </div>
+                        <div class="clients_slide swiper-slide">
+                          <div class="clients_slide__img">
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/clients_pic.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/clients_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/clients_pic.jpg" alt=""/>
+                            </picture>
+                          </div>
+                          <div class="clients_slide__info"> 
+                            <div class="clients_slide__tag">Фотогалерея</div>
+                            <p class="clients_slide__title">Завершенный проект №1</p>
+                            <p class="clients_slide__text">Завершенный типовой проект в частном секторе поселка под Владивостоком</p>
+                          </div>
+                        </div>
+                        <div class="clients_slide swiper-slide">
+                          <div class="clients_slide__img">
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/clients_pic.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/clients_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/clients_pic.jpg" alt=""/>
+                            </picture>
+                          </div>
+                          <div class="clients_slide__info"> 
+                            <div class="clients_slide__tag">Фотогалерея</div>
+                            <p class="clients_slide__title">Завершенный проект №1</p>
+                            <p class="clients_slide__text">Завершенный типовой проект в частном секторе поселка под Владивостоком</p>
+                          </div>
+                        </div>
+              </div>
+              <div class="clients__nav slider__buttons">
+                <button class="slider__button slider__button--prev clients__slider_btn--prev">
+                  <svg>
+                    <use xlink:href="#slider_arrow"></use>
+                  </svg>
+                </button>
+                <button class="slider__button slider__button--next clients__slider_btn--next">
+                  <svg>
+                    <use xlink:href="#slider_arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="clients__pagination slider__pagination"></div>
+            <div class="partners__bottom"> 
+              <div class="partners_discuss" data-scroll="" data-scroll-fadeup="">
+                <div class="partners_discuss__tag" data-scroll="" data-scroll-fadeup="">
+                  <div class="dot"></div>
+                  <div class="text">Наши менеджеры готовы помочь</div>
+                </div>
+                <h3 class="partners_discuss__title" data-scroll="" data-scroll-fadeup="">Ответим на ваши вопросы <br class="desktop"> и поможем <br class="mobile"> с выбором</h3>
+                <p class="partners_discuss__text" data-scroll="" data-scroll-fadeup="">Мы понимаем, что определиться самостоятельно бывает сложно. <br class="desktop"> Мы всегда готовы помочь вам, ответить на все вопросы <br class="desktop"> и подсказать оптимальный вариант для ваших нужд</p>
+                <button class="partners_discuss__btn btn btn--white" data-scroll="" data-scroll-fadeup="" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Ответим на ваши вопросы и поможем с выбором (низ страницы типового проекта)&quot;}]"><span class="btn__text">Обсудить проект</span></button>
+              </div>
+              <div class="partners_promo" data-scroll="" data-scroll-fadeup="">
+                <h3 class="partners_discuss__title partners_discuss__title--promo" data-scroll="" data-scroll-fadeup="">Время осуществить <br> свою мечту</h3>
+                <p class="partners_discuss__text partners_discuss__text--promo" data-scroll="" data-scroll-fadeup="">Обретите свой собственный, современный <br> и экологичный дом для счастливой жизни</p>
+                <div class="types_card__img types_card__img--promo" data-scroll="" data-scroll-fadeup="">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/types_pic_2.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/types_pic_2.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/types_pic_2.png" alt=""/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__table">
-            <button class="footer__project_btn" data-linked-modal="modal_project">
+            <button class="footer__project_btn" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Футер&quot;}]">
               <svg class="arrow arrow--white">
                 <use xlink:href="#arrow_diagon"></use>
               </svg><img class="arrow arrow--gradient" data-src="/assets/img/arrow_diagon_gradient.svg" alt="" data-lazy=""/><span class="text">Обсудить проект</span>

@@ -10,11 +10,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon.ico">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#24a548">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex, nofollow">
   </head>
   <body><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
 	
@@ -32,6 +33,10 @@
 	
 		<symbol id="fire" viewBox="0 0 12 16">
 			<path d="M12 9.366c0-1.906-.908-3.801-2.43-5.069l-.197-.16a.468.468 0 0 0-.715.155c-.062.131-.106 1.46-.106 1.685 0 .045-.01.119-.009.127a.311.311 0 0 1-.364.307c-.153-.025-.258-.17-.258-.326-.01-2.273-.705-3.86-1.98-5.043C5.161.318 4.239-.322 3.957.177c-.072.128.047.414.167.78.267.816-.547 2.118-1.697 3.42C1.346 5.6 0 7.123 0 9.367c0 3.018 2.86 5.769 6 5.769s6-2.75 6-5.77z"/>
+		</symbol>
+	
+		<symbol id="full" viewBox="0 0 16 16">
+			<path d="M14.667 2.813a.222.222 0 0 0-.38-.158L10.054 6.89a.667.667 0 0 1-.943-.943l4.234-4.233a.222.222 0 0 0-.158-.38H10.89a.667.667 0 1 1 0-1.333h4.444c.368 0 .667.298.667.667V5.11a.667.667 0 0 1-1.333 0V2.813zM1.333 13.187a.222.222 0 0 0 .38.158L5.946 9.11a.667.667 0 1 1 .943.943l-4.234 4.233a.222.222 0 0 0 .158.38H5.11a.667.667 0 0 1 0 1.333H.667A.667.667 0 0 1 0 15.333V10.89a.667.667 0 1 1 1.333 0v2.299z"/>
 		</symbol>
 	
 		<symbol id="logoCircle" viewBox="0 0 10 7">
@@ -56,7 +61,7 @@
 	
 </svg>
 
-    <div class="preloader"><img src="/assets/img/preloader_logo.svg"></div>
+    <div class="preloader"></div>
     <div class="modals">
       <div class="modal__overlay" id="commonModalOverlay"></div>
       <div class="modal_menu modal" data-modal="modal_menu">
@@ -82,7 +87,7 @@
             <div class="footer__links_item footer__links_item--last"> 
               <p class="footer__text footer__text--caption">Адрес</p><a class="footer__link footer__link--small" href="https://yandex.ru/maps/-/CDVmVIME" target="_blank">г. Владивосток, <br> пр-кт Красного знамени 114А, оф. 401</a>
             </div>
-            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_project"><span class="btn__text">Обсудить проект</span></button>
+            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Меню&quot;}]"><span class="btn__text">Обсудить проект</span></button>
           </div>
         </div>
       </div>
@@ -94,6 +99,7 @@
           </picture>
         </div>
         <form class="modal_form__form" data-form-id="modal_project">
+          <input type="hidden" name="block" value="">
           <input type="hidden" name="form" value="Обсудить проект">
           <button class="modal_close modal_form__close" data-modal-close="">
             <svg class="icon">
@@ -121,15 +127,152 @@
           <p class="modal_form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь c <a class="link" href="/privacy">политикой конфиденциальности</a></p>
         </form>
       </div>
-    </div>
-    <section class="not_found">
-      <div class="not_found__container container"><a class="header__logo" href="/"><img class="image" data-src="/assets/img/main_logo.svg" alt="" data-lazy=""/></a>
-        <div class="section_block section_block--center">
-          <h1 class="section_block__title">Сожалеем, но эта <br class="desktop"> страница не найдена</h1>
-          <p class="section_block__text">Скорее всего её больше не существует или был <br class="desktop"> введён неверный URL-адрес. </p>
-        </div><a class="not_found__button btn btn--filled" href="/"><span class="btn__text">На главную страницу</span></a>
+      <div class="modal_order modal_form modal" data-modal="modal_order" action="/mailer" data-mailer="">
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/modal_form_pic.jpg" alt=""/>
+          </picture>
+        </div>
+        <form class="modal_form__form" data-form-id="modal_order">
+          <input type="hidden" name="block" value="">
+          <input type="hidden" name="form" value="Заказать проект">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <h3 class="modal_form__title">Заказать проект</h3>
+          <p class="modal_form__text section_block__text">Мы всегда готовы помочь! Оставьте свою заявку, после чего <br class="desktop"> наши менеджеры свяжутся с вами в ближайшее время</p>
+          <div class="modal_form__inputs">
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Номер телефона</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="comment" placeholder="Комментарий"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="modal_form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь c <a class="link" href="/privacy">политикой конфиденциальности</a></p>
+        </form>
       </div>
-    </section>
+      <div class="modal modal_gallery" data-modal="modal_gallery">
+        <button class="modal_close modal_gallery__close" data-modal-close>
+          <svg class="icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <div class="swiper slider_gallery">
+          <div class="swiper-wrapper"></div>
+        </div>
+        <div class="slider_gallery__pagination slider__pagination"></div>
+      </div>
+      <div class="modal_success modal_form modal" data-modal="modal_success" action="/mailer" data-mailer="">
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/modal_form_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/modal_form_pic.jpg" alt=""/>
+          </picture>
+        </div>
+        <div class="modal_form__form modal_form__form--success">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <div class="modal_form__icon"><img class="image" data-src="/assets/img/icon_success.svg" alt="" data-lazy=""/>
+          </div>
+          <h3 class="modal_form__title">Заявка отправлена</h3>
+          <p class="modal_form__text section_block__text">Спасибо! Наши менеджеры свяжутся с вами в ближайшее <br class="desktop"> время, сразу после обработки вашей заявки</p>
+          <button class="modal_form__btn btn btn--filled" data-modal-close=""><span class="btn__text">Отлично</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="content content--404">
+      <header class="header header--blur">
+        <div class="header__container container">
+          <div class="header__line"> <a class="header__logo" href="/"><img class="image" data-src="/assets/img/white_logo.svg" alt="" data-lazy=""/></a>
+            <nav class="header__nav"><a class="header__nav_link header__nav_link--dot" href="#catalog">
+                <div class="dot"></div> Проекты</a><a class="header__nav_link" href="#services">Услуги</a><a class="header__nav_link" href="#tech">Технологии</a><a class="header__nav_link" href="#advantages">Преимущества</a><a class="header__nav_link" href="#about">О компании</a></nav>
+            <div class="header__socials"> <a class="header__socials_link header__nav_link" href="tel:+7 914 326 40-47">+7 914 326 40-47</a><a class="header__socials_link header__nav_link" href="mailto:dsmhouse@mail.com">dsmhouse@mail.com</a>
+              <button class="header__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Хедер&quot;}]"><span class="btn__text">Обсудить проект</span></button>
+            </div>
+            <div class="header__mob"><a class="header__call" href="tel:+7 914 326 40-47">
+                <svg class="icon">
+                  <use xlink:href="#phone"></use>
+                </svg></a>
+              <button class="header__menu" data-linked-modal="modal_menu">
+                <svg class="icon">
+                  <use xlink:href="#menu"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header header--white">
+        <div class="header__container container">
+          <div class="header__line"> <a class="header__logo" href="/"><img class="image" data-src="/assets/img/black_logo.svg" alt="" data-lazy=""/></a>
+            <nav class="header__nav"><a class="header__nav_link header__nav_link--dot" href="#catalog">
+                <div class="dot"></div> Проекты</a><a class="header__nav_link" href="#services">Услуги</a><a class="header__nav_link" href="#tech">Технологии</a><a class="header__nav_link" href="#advantages">Преимущества</a><a class="header__nav_link" href="#about">О компании</a></nav>
+            <div class="header__socials"> <a class="header__socials_link header__nav_link" href="tel:+7 914 326 40-47">+7 914 326 40-47</a><a class="header__socials_link header__nav_link" href="mailto:dsmhouse@mail.com">dsmhouse@mail.com</a>
+              <button class="header__btn btn btn--filled" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Хедер&quot;}]"><span class="btn__text">Обсудить проект</span></button>
+            </div>
+            <div class="header__mob"><a class="header__call" href="tel:+7 914 326 40-47">
+                <svg class="icon">
+                  <use xlink:href="#phone"></use>
+                </svg></a>
+              <button class="header__menu" data-linked-modal="modal_menu">
+                <svg class="icon">
+                  <use xlink:href="#menu"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="not_found">
+        <div class="not_found__container container">
+          <div class="section_block section_block--center">
+            <h1 class="section_block__title not_found__title" data-scroll="" data-scroll-fadeup=""><strong>404</strong></h1>
+            <p class="section_block__text not_found__text" data-scroll="" data-scroll-fadeup="">Страница не найдена или ее больше <br class="desktop"> не существует</p><a class="not_found__button btn btn--filled" data-scroll="" data-scroll-fadeup="" href="/"><span class="btn__text">На главную</span></a>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__table">
+            <button class="footer__project_btn" data-linked-modal="modal_project" data-modal-set-inputs="[{&quot;key&quot;:&quot;block&quot;,&quot;value&quot;:&quot;Футер&quot;}]">
+              <svg class="arrow arrow--white">
+                <use xlink:href="#arrow_diagon"></use>
+              </svg><img class="arrow arrow--gradient" data-src="/assets/img/arrow_diagon_gradient.svg" alt="" data-lazy=""/><span class="text">Обсудить проект</span>
+            </button>
+            <div class="footer__links"> 
+              <div class="footer__links_item"> 
+                <p class="footer__text footer__text--caption">Офис продаж</p><a class="footer__link" href="tel:+ 7 (914) 326-40-47">+ 7 (914) 326-40-47</a>
+              </div>
+              <div class="footer__links_item"> 
+                <p class="footer__text footer__text--caption">Email</p><a class="footer__link" href="mailto:dsmhouse@mail.ru">dsmhouse@mail.ru</a>
+              </div>
+              <div class="footer__links_item footer__links_item--last"> 
+                <p class="footer__text footer__text--caption">Адрес</p><a class="footer__link footer__link--small" href="https://yandex.ru/maps/-/CDVmVIME" target="_blank">г. Владивосток, <br> пр-кт Красного знамени 114А, <br> оф. 401</a>
+              </div>
+            </div>
+          </div><a class="footer__text footer__text--block footer__text--link" href="/privacy">Политика конфиденциальности</a>
+          <div class="footer__bottom"> 
+            <p class="footer__text footer__text--rights">© 2016-2023, ООО «ДСМ», все права защищены. </p>
+            <div class="footer__text footer__text--block">Разработка сайта — <a class="link" href="https://housevl.ru/" target="_blank">Digital-агентство House</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
     <script src="js/app.js"></script>
   </body>

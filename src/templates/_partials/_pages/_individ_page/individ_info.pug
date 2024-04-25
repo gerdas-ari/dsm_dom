@@ -1,0 +1,38 @@
+section.individ_info
+	.individ_info__container.container 
+
+		.materials_about.materials_about--individ(data-load-more-container="")
+			.materials_about__left
+				h2.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Информация #[br.mobile] о проекте
+				p.section_block__text(data-scroll="", data-scroll-fadeup="") Индивидуальный проект современного одноэтажного дома в стиле современной классики
+
+			.materials_about__right
+
+				.materials_about__wrap(data-scroll="", data-scroll-fadeup="", data-services-container="") 
+					p.section_block__text.section_block__text--black.materials_about__text Дом подойдет для комфортной жизни семьи из 4-5 человек. Проект выполнен в стиле шале: первый этаж сделан из керамических блоков, а второй — из дерева. Главный плюс таких домов — в компромиссе при выборе материала. Керамический блок позволяет экспериментировать с внутренней отделкой первого этажа. А клееный брус создаст уют деревянного дома на втором этаже, где расположены спальни. Дом подойдет для комфортной жизни семьи из 4-5 человек. Проект выполнен в стиле шале: первый этаж сделан из керамических блоков, а второй — из дерева. Главный плюс таких домов — в компромиссе при выборе материала. Керамический блок позволяет экспериментировать с внутренней отделкой первого этажа. А клееный брус создаст уют деревянного дома на втором этаже, где расположены спальни.
+
+				button.materials_about__btn_more(data-scroll="", data-scroll-fadeup="", data-services-btn="") 
+					span.text--1 Читать полностью
+					span.text--2 Скрыть
+
+		
+		.individ_info_banner(data-scroll="", data-scroll-fadeup="")
+			.individ_info_banner__wrap 
+				h3.section_block__title.section_block__title--small(data-scroll="", data-scroll-fadeup="") Построим дом #[br] #[strong для каждого]
+				p.section_block__text(data-scroll="", data-scroll-fadeup="") Предоставляем индивидуальную разработку проекта дома под любые нужды и под любой запрос клиента, а также предложим лучшие решения для вашего бюджет
+
+				button.individ_info_banner__btn.btn.btn--filled(data-scroll="", data-scroll-fadeup="", data-linked-modal="modal_project", data-modal-set-inputs=`[{"key":"block","value":"Страница индивидуального проекта"}]`)
+					span.btn__text Обсудить проект
+
+			.individ_info_banner__img
+				+img(`${assetsPath}/img/individ_info_banner_pic.png`, '', 'image')
+
+		.individ_info__gallery 
+			.individ_info__gallery_pic.materials__img(data-scroll="", data-scroll-fadeup="")
+				+img(`${assetsPath}/img/home_bg_4.jpg`, '', 'image')
+			.individ_info__gallery_pic.materials__img(data-scroll="", data-scroll-fadeup="")
+				+img(`${assetsPath}/img/home_bg_4.jpg`, '', 'image')
+			.individ_info__gallery_pic.materials__img(data-scroll="", data-scroll-fadeup="")
+				+img(`${assetsPath}/img/home_bg_4.jpg`, '', 'image')
+			.individ_info__gallery_pic.materials__img(data-scroll="", data-scroll-fadeup="")
+				+img(`${assetsPath}/img/home_bg_4.jpg`, '', 'image')

@@ -1,21 +1,51 @@
 .not_found {
+    height: 100vh;
+    min-height: em(970);
+
+    @media(max-width: 500px) {
+        min-height: 100vh;
+    }
 
     &__container {
         height: 100%;
 
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+    }
 
-        padding: em(60) 0 em(180);
+    &__title {
+        font-size: em(380);
+        line-height: 1em;
+
+        @media(max-width: 1480px) {
+            font-size: em(280);
+        }
 
         @media(max-width: 500px) {
-            padding: em(40) 1.5em em(60);
+            font-size: em(140);
+        }
+    }
+
+    &__text {
+        font-family: $title-font;
+        font-weight: 500;
+        font-variation-settings: 'wght' 500, 'wdth' 151, 'GRAD' -54, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        color: $c-black;
+
+        @media(max-width: 500px) {
+            font-size: em(16);
         }
     }
 
     &__button {
-        width: em(224,16);
-        height: em(56,16);
+        width: em(192);
+        border-radius: 56px;
+        margin-top: em(54);
+
+        @media(max-width: 500px) {
+            width: 100%;
+            margin-top: em(42);
+        }
     }
 }

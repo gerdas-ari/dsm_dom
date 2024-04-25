@@ -9,6 +9,10 @@
         border-radius: 10px;
         overflow: hidden;
 
+        @media(max-width: 1480px) {
+            height: em(540);
+        }
+
         @media(max-width: 500px) {
             margin-top: em(60);
 

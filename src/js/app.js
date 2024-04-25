@@ -18,6 +18,11 @@ import advanSlider from "./components/sliders/advanSlider";
 import clientsSlider from "./components/sliders/clientsSlider";
 import projectInfoDropdown from "./components/projectInfoDropdown";
 import genInfoSlider from "./components/sliders/genInfoSlider";
+import tab from "./components/tab";
+import materialsSlider from "./components/sliders/materialsSlider";
+import tariffsSlider from "./components/sliders/tariffsSlider";
+import fullGallerySlider from "./components/sliders/fullGallerySlider";
+
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -47,15 +52,28 @@ document.addEventListener("DOMContentLoaded", _ => {
     advanSlider();
     clientsSlider();
     genInfoSlider();
+    fullGallerySlider();
+
     projectInfoDropdown();
 
     if (window.matchMedia("(max-width:500px)").matches) {
         techSlider();
+        tariffsSlider();
+        
 
-        const blocks = document.querySelectorAll('.home');
-        blocks.forEach(block => {
+        const homeBlocks = document.querySelectorAll('.home');
+        homeBlocks.forEach(block => {
             homeTabsSlider();
         })
+
+        const materialsBlocks = document.querySelectorAll('.materials__inner');
+        materialsBlocks.forEach(block => {
+            materialsSlider();
+        })
+    }
+
+    if (document.querySelector('[data-tab-wrapper]')) {
+        tab(document.querySelector('[data-tab-wrapper]'));
     }
 
 

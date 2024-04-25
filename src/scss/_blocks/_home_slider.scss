@@ -1,6 +1,8 @@
 .home_slider {
 	display: none;	
 
+    min-height: em(56);
+
     @media(max-width: 500px) {
         display: flex;
         align-items: center;
@@ -14,6 +16,7 @@
 
     &__slide {
         text-align: center;
+        height: auto;
     }
 
     &__pagination {

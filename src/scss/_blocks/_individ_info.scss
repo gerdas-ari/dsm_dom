@@ -1,0 +1,21 @@
+.individ_info {
+    margin-top: em(160);
+
+    @media(max-width: 500px) {
+        margin-top: em(86);
+    }
+	
+    &__gallery {
+        margin-top: em(140);
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: em(30);
+
+        @media(max-width: 500px) {
+            margin-top: em(100);
+
+            grid-template-columns: 100%;
+        }
+    }
+}

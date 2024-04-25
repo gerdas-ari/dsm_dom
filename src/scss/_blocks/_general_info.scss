@@ -1,6 +1,10 @@
 .general_info {
 	padding-top: em(180);
 
+    @media(max-width: 1480px) {
+        padding-top: em(100);
+    }
+
     @media(max-width: 500px) {
         padding-top: em(86);
     }
@@ -12,7 +16,7 @@
 
         width: 100%;
 
-        @media(max-width: 500px) {
+        @media(max-width: 1480px) {
             grid-template-columns: 100%;
             gap: em(24);
         }
@@ -23,7 +27,7 @@
 
         max-width: em(784);
 
-        @media(max-width: 500px) {
+        @media(max-width: 1480px) {
             max-width: 100%;
         }
     }
@@ -42,7 +46,7 @@
 
         width: 100%;
 
-        @media(max-width: 500px) {
+        @media(max-width: 1480px) {
             position: static;
             margin-top: em(38);
         }

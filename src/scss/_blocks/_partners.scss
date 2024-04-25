@@ -22,7 +22,7 @@
 
         margin-top: 2em;
 
-        @media(max-width: 500px) {
+        @media(max-width: 1480px) {
             grid-template-columns: repeat(2, 1fr);
             gap: em(20);
 
@@ -61,7 +61,7 @@
 
         height: em(720);
 
-        @media(max-width: 500px) {
+        @media(max-width: 1480px) {
             margin-top: em(60);
 
             grid-template-columns: 100%;
